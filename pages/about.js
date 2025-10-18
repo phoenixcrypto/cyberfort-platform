@@ -21,32 +21,20 @@ export default function About() {
       
       <main>
         {/* Hero Profile Section */}
-        <section className="page-header" style={{ 
-          background: 'linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%)',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
+        <section className="about-hero">
           <div className="container" style={{ position: 'relative', zIndex: 2 }}>
             {/* Animated Background Elements */}
-            <div style={{
-              position: 'absolute',
+            <div className="floating-element" style={{
               top: '20%',
               left: '10%',
               width: '100px',
-              height: '100px',
-              border: '2px solid rgba(0, 255, 255, 0.1)',
-              borderRadius: '50%',
-              animation: 'float 6s ease-in-out infinite'
+              height: '100px'
             }}></div>
-            <div style={{
-              position: 'absolute',
+            <div className="floating-element" style={{
               top: '60%',
               right: '15%',
               width: '60px',
-              height: '60px',
-              border: '2px solid rgba(0, 191, 255, 0.1)',
-              borderRadius: '50%',
-              animation: 'float 8s ease-in-out infinite reverse'
+              height: '60px'
             }}></div>
             
             <div style={{ 
@@ -59,24 +47,8 @@ export default function About() {
               padding: '4rem 0'
             }}>
               {/* Profile Image with Enhanced Styling */}
-              <div style={{
-                position: 'relative',
-                width: '250px',
-                height: '250px',
-                borderRadius: '50%',
-                border: '4px solid var(--neon-blue)',
-                boxShadow: '0 0 30px rgba(0, 191, 255, 0.4), 0 0 60px rgba(0, 191, 255, 0.2)',
-                overflow: 'hidden',
-                background: 'linear-gradient(45deg, var(--neon-blue), var(--accent-silver))',
-                padding: '4px'
-              }}>
-                <div style={{
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                  background: 'var(--bg-primary)'
-                }}>
+              <div className="profile-image-container">
+                <div className="profile-image-inner">
                   <Image
                     src="/assets/images/profile.jpg"
                     alt="Zeyad Eltmsah Profile Picture"
@@ -92,17 +64,7 @@ export default function About() {
               
               {/* Name with Gradient Effect */}
               <div data-aos="fade-up" data-aos-delay="200">
-                <h1 style={{ 
-                  background: 'linear-gradient(45deg, var(--neon-blue), #00FFFF, var(--accent-silver))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  fontWeight: '900',
-                  fontSize: '3.5rem',
-                  margin: '0',
-                  fontFamily: 'Orbitron, monospace',
-                  textShadow: '0 0 20px rgba(0, 191, 255, 0.3)'
-                }}>
+                <h1 className="gradient-text">
                   Zeyad Eltmsah
                 </h1>
                 
@@ -199,14 +161,8 @@ export default function About() {
                     and innovative solutions that bridge the gap between theoretical knowledge and practical application.
                   </p>
                   
-                  <div style={{
-                    background: 'rgba(0, 191, 255, 0.1)',
-                    padding: '1rem',
-                    borderRadius: '8px',
-                    borderLeft: '4px solid var(--neon-blue)',
-                    marginTop: '1rem'
-                  }}>
-                    <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--neon-blue)' }}>
+                  <div className="quote-box">
+                    <p style={{ margin: 0 }}>
                       "Building tomorrow's cybersecurity leaders, one platform at a time."
                     </p>
                   </div>
@@ -249,14 +205,7 @@ export default function About() {
                     marginBottom: '1rem'
                   }}>
                     {['Next.js', 'React', 'CSS3', 'AOS', 'Font Awesome', 'Google Fonts'].map((tech) => (
-                      <span key={tech} style={{
-                        background: 'var(--neon-blue)',
-                        color: 'var(--bg-primary)',
-                        padding: '0.3rem 0.8rem',
-                        borderRadius: '20px',
-                        fontSize: '0.8rem',
-                        fontWeight: '500'
-                      }}>
+                      <span key={tech} className="tech-badge">
                         {tech}
                       </span>
                     ))}
@@ -272,18 +221,9 @@ export default function About() {
               </h3>
               
               <div className="grid grid-3">
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(45deg, var(--neon-blue), #00FFFF)',
-                    margin: '0 auto 1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '2rem',
-                    color: 'var(--bg-primary)'
+                <div className="skill-card">
+                  <div className="skill-icon" style={{
+                    background: 'linear-gradient(45deg, var(--neon-blue), #00FFFF)'
                   }}>
                     <i className="fas fa-shield-alt"></i>
                   </div>
@@ -293,18 +233,9 @@ export default function About() {
                   </p>
                 </div>
                 
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(45deg, var(--success-green), #00FF88)',
-                    margin: '0 auto 1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '2rem',
-                    color: 'var(--bg-primary)'
+                <div className="skill-card">
+                  <div className="skill-icon" style={{
+                    background: 'linear-gradient(45deg, var(--success-green), #00FF88)'
                   }}>
                     <i className="fas fa-code"></i>
                   </div>
@@ -314,18 +245,9 @@ export default function About() {
                   </p>
                 </div>
                 
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(45deg, var(--warning-orange), #FF8800)',
-                    margin: '0 auto 1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '2rem',
-                    color: 'var(--bg-primary)'
+                <div className="skill-card">
+                  <div className="skill-icon" style={{
+                    background: 'linear-gradient(45deg, var(--warning-orange), #FF8800)'
                   }}>
                     <i className="fas fa-users"></i>
                   </div>
@@ -344,18 +266,9 @@ export default function About() {
               </h3>
               
               <div className="grid grid-2">
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: '100px',
-                    height: '100px',
-                    borderRadius: '50%',
+                <div className="contact-card">
+                  <div className="contact-icon" style={{
                     background: 'linear-gradient(45deg, #25D366, #128C7E)',
-                    margin: '0 auto 1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '2.5rem',
-                    color: 'white',
                     boxShadow: '0 8px 25px rgba(37, 211, 102, 0.3)'
                   }}>
                     <i className="fab fa-whatsapp"></i>
@@ -379,18 +292,9 @@ export default function About() {
                   </a>
                 </div>
                 
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: '100px',
-                    height: '100px',
-                    borderRadius: '50%',
+                <div className="contact-card">
+                  <div className="contact-icon" style={{
                     background: 'linear-gradient(45deg, var(--neon-blue), #0099CC)',
-                    margin: '0 auto 1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '2.5rem',
-                    color: 'var(--bg-primary)',
                     boxShadow: '0 8px 25px rgba(0, 191, 255, 0.3)'
                   }}>
                     <i className="fas fa-graduation-cap"></i>
@@ -472,30 +376,6 @@ export default function About() {
 
       <Footer />
       <WhatsAppButton />
-      
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes pulse {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.1; transform: scale(1.1); }
-        }
-        
-        @media (max-width: 768px) {
-          .grid-3 {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-          }
-          
-          .grid-2 {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-          }
-        }
-      `}</style>
     </>
   )
 }

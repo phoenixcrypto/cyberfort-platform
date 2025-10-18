@@ -53,6 +53,7 @@ export default function Tasks() {
       <Head>
         <title>Tasks – CyberSec'25 | ElTmsah</title>
         <meta name="description" content="Assignments and tasks for Cyber Security 2025 — managed by ElTmsah" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
       </Head>
 
       <Navbar />

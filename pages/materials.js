@@ -56,6 +56,7 @@ export default function Materials() {
       <Head>
         <title>Materials – CyberSec'25 | ElTmsah</title>
         <meta name="description" content="Course materials for Cyber Security 2025 — managed by ElTmsah" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
       </Head>
 
       <Navbar />

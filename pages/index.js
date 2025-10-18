@@ -80,48 +80,28 @@ export default function Home() {
 
       <Navbar />
       
-      <main>
+      <main className="overflow-x-hidden">
         {/* Enhanced Hero Section */}
         <section className="hero-section">
-          <div className="container">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="hero-content" data-aos="fade-up">
               {/* Animated Background Elements */}
-              <div className="floating-element" style={{
-                top: '10%',
-                left: '5%',
-                width: '80px',
-                height: '80px'
-              }}></div>
-              <div className="floating-element" style={{
-                top: '70%',
-                right: '8%',
-                width: '60px',
-                height: '60px'
-              }}></div>
+              <div className="floating-element w-20 h-20 top-10 left-5"></div>
+              <div className="floating-element w-16 h-16 top-70 right-8"></div>
               
-              <h1 className="gradient-text" style={{ fontSize: '4rem', marginBottom: '1.5rem' }}>
+              <h1 className="gradient-text text-4xl md:text-5xl lg:text-6xl mb-6">
                 CYBERSEC'25 | ELTMSAH
               </h1>
-              <p className="lead" style={{ 
-                fontSize: '1.3rem', 
-                marginBottom: '2rem',
-                color: 'var(--text-primary)',
-                fontWeight: '500'
-              }}>
+              <p className="text-xl md:text-2xl text-text-primary font-medium mb-8 max-w-4xl mx-auto leading-relaxed">
                 Your comprehensive platform for Cyber Security course materials, schedules, 
                 and announcements. Organized by students, for students.
               </p>
-              <div className="btn-group" style={{ 
-                display: 'flex', 
-                gap: '1rem', 
-                justifyContent: 'center',
-                flexWrap: 'wrap'
-              }}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="/materials" className="btn-enhanced">
-                  <i className="fas fa-book"></i> Browse Materials
+                  <i className="fas fa-book mr-2"></i> Browse Materials
                 </Link>
                 <Link href="/schedule" className="btn-enhanced">
-                  <i className="fas fa-calendar"></i> View Schedule
+                  <i className="fas fa-calendar mr-2"></i> View Schedule
                 </Link>
               </div>
             </div>
@@ -129,64 +109,55 @@ export default function Home() {
         </section>
 
         {/* Enhanced Platform Overview */}
-        <section className="section">
-          <div className="container">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto">
             <div className="section-header" data-aos="fade-up">
-              <h2>Platform Overview</h2>
+              <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Platform Overview</h2>
             </div>
             
             <div className="grid-enhanced grid-enhanced-3">
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="100">
-                <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--primary-blue), #00FFFF)',
-                    margin: '0 auto'
-                  }}>
+                <div className="text-center mb-6">
+                  <div className="skill-icon bg-gradient-to-r from-primary-blue to-cyan-400 mx-auto">
                     <i className="fas fa-calendar-alt"></i>
                   </div>
                 </div>
-                <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Schedule</h3>
-                <p style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+                <h3 className="text-center mb-4 text-xl font-semibold">Schedule</h3>
+                <p className="text-center mb-6 text-text-secondary">
                   Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.
                 </p>
-                <Link href="/schedule" className="btn-enhanced" style={{ width: '100%' }}>
-                  <i className="fas fa-calendar"></i> View Schedule
+                <Link href="/schedule" className="btn-enhanced w-full">
+                  <i className="fas fa-calendar mr-2"></i> View Schedule
                 </Link>
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--success-green), #00FF88)',
-                    margin: '0 auto'
-                  }}>
+                <div className="text-center mb-6">
+                  <div className="skill-icon bg-gradient-to-r from-success-green to-green-400 mx-auto">
                     <i className="fas fa-file-pdf"></i>
                   </div>
                 </div>
-                <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Materials</h3>
-                <p style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+                <h3 className="text-center mb-4 text-xl font-semibold">Materials</h3>
+                <p className="text-center mb-6 text-text-secondary">
                   Download course materials, lecture notes, and resources. All organized by course and updated regularly.
                 </p>
-                <Link href="/materials" className="btn-enhanced" style={{ width: '100%' }}>
-                  <i className="fas fa-book"></i> Browse Materials
+                <Link href="/materials" className="btn-enhanced w-full">
+                  <i className="fas fa-book mr-2"></i> Browse Materials
                 </Link>
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="300">
-                <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--warning-orange), #FF8800)',
-                    margin: '0 auto'
-                  }}>
+                <div className="text-center mb-6">
+                  <div className="skill-icon bg-gradient-to-r from-warning-orange to-orange-400 mx-auto">
                     <i className="fas fa-tasks"></i>
                   </div>
                 </div>
-                <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Tasks</h3>
-                <p style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+                <h3 className="text-center mb-4 text-xl font-semibold">Tasks</h3>
+                <p className="text-center mb-6 text-text-secondary">
                   Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.
                 </p>
-                <Link href="/tasks" className="btn-enhanced" style={{ width: '100%' }}>
-                  <i className="fas fa-tasks"></i> View Tasks
+                <Link href="/tasks" className="btn-enhanced w-full">
+                  <i className="fas fa-tasks mr-2"></i> View Tasks
                 </Link>
               </div>
             </div>
@@ -194,75 +165,65 @@ export default function Home() {
         </section>
 
         {/* Enhanced Latest Updates */}
-        <section className="section" style={{ background: 'var(--bg-secondary)' }}>
-          <div className="container">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg-secondary">
+          <div className="container mx-auto">
             <div className="section-header" data-aos="fade-up">
-              <h2>Latest Updates</h2>
+              <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Latest Updates</h2>
             </div>
             
             <div className="grid-enhanced grid-enhanced-2">
               {/* Latest Materials */}
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="100">
-                <h3 style={{ marginBottom: '2rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
-                  <i className="fas fa-book"></i> Recent Materials
+                <h3 className="mb-8 text-primary-blue text-center text-xl font-semibold">
+                  <i className="fas fa-book mr-2"></i> Recent Materials
                 </h3>
                 {loading ? (
-                  <div style={{ textAlign: 'center' }}>
+                  <div className="text-center">
                     <div className="loading-spinner"></div>
-                    <p style={{ marginTop: '1rem' }}>Loading materials...</p>
+                    <p className="mt-4 text-text-secondary">Loading materials...</p>
                   </div>
                 ) : error ? (
                   <div className="error-card">
-                    <i className="fas fa-exclamation-triangle" style={{ fontSize: '2rem', marginBottom: '1rem' }}></i>
+                    <i className="fas fa-exclamation-triangle text-3xl mb-4"></i>
                     <p>{error}</p>
                   </div>
                 ) : materialsData && materialsData.length > 0 ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div className="flex flex-col gap-4">
                     {materialsData.slice(0, 3).map((material) => (
                       <MaterialCard key={material.id} material={material} />
                     ))}
-                    <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                    <div className="text-center mt-4">
                       <Link href="/materials" className="btn-enhanced">
-                        <i className="fas fa-book"></i> View All Materials
+                        <i className="fas fa-book mr-2"></i> View All Materials
                       </Link>
                     </div>
                   </div>
                 ) : (
-                  <p style={{ color: 'var(--text-muted)', textAlign: 'center' }}>No materials available yet.</p>
+                  <p className="text-text-muted text-center">No materials available yet.</p>
                 )}
               </div>
 
               {/* Latest Announcement */}
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ marginBottom: '2rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
-                  <i className="fas fa-bullhorn"></i> Latest Announcement
+                <h3 className="mb-8 text-primary-blue text-center text-xl font-semibold">
+                  <i className="fas fa-bullhorn mr-2"></i> Latest Announcement
                 </h3>
                 {announcementsData?.latest ? (
                   <div>
-                    <h4 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>{announcementsData.latest.title}</h4>
-                    <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>{announcementsData.latest.content}</p>
-                    <div style={{ 
-                      display: 'flex', 
-                      justifyContent: 'space-between', 
-                      alignItems: 'center', 
-                      fontSize: '0.9rem', 
-                      color: 'var(--text-muted)',
-                      marginBottom: '1.5rem',
-                      padding: '1rem',
-                      background: 'rgba(0, 191, 255, 0.1)',
-                      borderRadius: '8px'
-                    }}>
-                      <span><i className="fas fa-user"></i> {announcementsData.latest.author}</span>
-                      <span><i className="fas fa-calendar"></i> {formatDate(announcementsData.latest.date)}</span>
+                    <h4 className="mb-4 text-text-primary text-lg font-semibold">{announcementsData.latest.title}</h4>
+                    <p className="mb-6 text-text-secondary leading-relaxed">{announcementsData.latest.content}</p>
+                    <div className="flex justify-between items-center text-sm text-text-muted mb-6 p-4 bg-primary-blue/10 rounded-lg">
+                      <span><i className="fas fa-user mr-1"></i> {announcementsData.latest.author}</span>
+                      <span><i className="fas fa-calendar mr-1"></i> {formatDate(announcementsData.latest.date)}</span>
                     </div>
-                    <div style={{ textAlign: 'center' }}>
+                    <div className="text-center">
                       <Link href="/announcements" className="btn-enhanced">
-                        <i className="fas fa-bullhorn"></i> View All Announcements
+                        <i className="fas fa-bullhorn mr-2"></i> View All Announcements
                       </Link>
                     </div>
                   </div>
                 ) : (
-                  <p style={{ color: 'var(--text-muted)', textAlign: 'center' }}>No announcements available yet.</p>
+                  <p className="text-text-muted text-center">No announcements available yet.</p>
                 )}
               </div>
             </div>
@@ -271,49 +232,40 @@ export default function Home() {
 
         {/* Enhanced Quick Schedule Preview */}
         {scheduleData && (
-          <section className="section">
-            <div className="container">
+          <section className="py-16 px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto">
               <div className="section-header" data-aos="fade-up">
-                <h2>Today's Schedule Preview</h2>
+                <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Today's Schedule Preview</h2>
               </div>
               <div className="enhanced-card" data-aos="fade-up">
-                <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
-                  <i className="fas fa-calendar-check"></i> Group A - Next Classes
+                <h3 className="mb-6 text-primary-blue text-center text-xl font-semibold">
+                  <i className="fas fa-calendar-check mr-2"></i> Group A - Next Classes
                 </h3>
                 {scheduleData.groupA && scheduleData.groupA.length > 0 ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div className="flex flex-col gap-4">
                     {scheduleData.groupA.slice(0, 3).map((classItem, index) => (
-                      <div key={index} style={{ 
-                        display: 'flex', 
-                        justifyContent: 'space-between', 
-                        alignItems: 'center',
-                        padding: '1rem',
-                        background: 'rgba(0, 191, 255, 0.1)',
-                        borderRadius: '10px',
-                        borderLeft: '4px solid var(--primary-blue)',
-                        transition: 'all 0.3s ease'
-                      }}>
+                      <div key={index} className="flex justify-between items-center p-4 bg-primary-blue/10 rounded-lg border-l-4 border-primary-blue transition-all duration-300 hover:bg-primary-blue/20">
                         <div>
-                          <strong style={{ color: 'var(--text-primary)' }}>{classItem.course}</strong>
+                          <strong className="text-text-primary">{classItem.course}</strong>
                           <br />
-                          <small style={{ color: 'var(--text-muted)' }}><i className="fas fa-map-marker-alt"></i> {classItem.location}</small>
+                          <small className="text-text-muted"><i className="fas fa-map-marker-alt mr-1"></i> {classItem.location}</small>
                         </div>
-                        <div style={{ textAlign: 'right' }}>
-                          <span style={{ color: 'var(--primary-blue)', fontWeight: '600', fontSize: '1.1rem' }}>
+                        <div className="text-right">
+                          <span className="text-primary-blue font-semibold text-lg">
                             {classItem.day}
                           </span>
                           <br />
-                          <small style={{ color: 'var(--text-muted)' }}>{classItem.time}</small>
+                          <small className="text-text-muted">{classItem.time}</small>
                         </div>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <p style={{ color: 'var(--text-muted)', textAlign: 'center' }}>No schedule available yet.</p>
+                  <p className="text-text-muted text-center">No schedule available yet.</p>
                 )}
-                <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+                <div className="text-center mt-8">
                   <Link href="/schedule" className="btn-enhanced">
-                    <i className="fas fa-calendar"></i> View Full Schedule
+                    <i className="fas fa-calendar mr-2"></i> View Full Schedule
                   </Link>
                 </div>
               </div>

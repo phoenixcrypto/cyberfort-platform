@@ -102,41 +102,26 @@ export default function Announcements() {
       <main>
         {/* Enhanced Hero Section */}
         <section className="hero-section">
-          <div className="container">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="hero-content" data-aos="fade-up">
               {/* Animated Background Elements */}
-              <div className="floating-element" style={{
-                top: '20%',
-                left: '10%',
-                width: '80px',
-                height: '80px'
-              }}></div>
-              <div className="floating-element" style={{
-                top: '60%',
-                right: '12%',
-                width: '60px',
-                height: '60px'
-              }}></div>
+              <div className="floating-element w-20 h-20 top-20 left-10"></div>
+              <div className="floating-element w-16 h-16 top-60 right-12"></div>
               
-              <h1 className="gradient-text" style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>
+              <h1 className="gradient-text text-4xl md:text-5xl lg:text-6xl mb-6">
                 Announcements
               </h1>
-              <p className="lead" style={{ 
-                fontSize: '1.2rem', 
-                marginBottom: '2rem',
-                color: 'var(--text-primary)',
-                fontWeight: '500'
-              }}>
+              <p className="text-xl md:text-2xl text-text-primary font-medium mb-8 max-w-4xl mx-auto leading-relaxed">
                 Stay updated with the latest announcements, schedule changes, and important information.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto">
             {/* Enhanced Announcements List */}
-            <div className="grid-enhanced" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div className="flex flex-col gap-8">
               {announcements.map((announcement, index) => (
                 <div 
                   key={announcement.id} 
@@ -148,12 +133,12 @@ export default function Announcements() {
                     position: 'relative'
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
-                    <div style={{ flex: 1 }}>
-                      <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)', fontSize: '1.5rem' }}>
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="flex-1">
+                      <h3 className="mb-4 text-text-primary text-2xl font-semibold">
                         {announcement.title}
                       </h3>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                      <div className="flex items-center gap-4 mb-4 flex-wrap">
                         <span 
                           className="tech-badge"
                           style={{ 
@@ -165,17 +150,17 @@ export default function Announcements() {
                         >
                           <i className={getPriorityIcon(announcement.priority)}></i> {announcement.priority.toUpperCase()}
                         </span>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-user" style={{ color: 'var(--primary-blue)' }}></i> {announcement.author}
+                        <span className="text-text-muted text-sm">
+                          <i className="fas fa-user text-primary-blue mr-1"></i> {announcement.author}
                         </span>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-calendar" style={{ color: 'var(--primary-blue)' }}></i> {formatDate(announcement.date)}
+                        <span className="text-text-muted text-sm">
+                          <i className="fas fa-calendar text-primary-blue mr-1"></i> {formatDate(announcement.date)}
                         </span>
                       </div>
                     </div>
                   </div>
                   
-                  <div style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1rem' }}>
+                  <div className="text-text-secondary leading-relaxed text-lg">
                     {announcement.content}
                   </div>
                 </div>
@@ -183,12 +168,12 @@ export default function Announcements() {
             </div>
 
             {/* Enhanced Information Section */}
-            <div className="grid-enhanced grid-enhanced-2" style={{ marginTop: '4rem' }}>
+            <div className="grid-enhanced grid-enhanced-2 mt-16">
               <div className="enhanced-card" data-aos="fade-up">
-                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
-                  <i className="fas fa-info-circle"></i> About Announcements
+                <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
+                  <i className="fas fa-info-circle mr-2"></i> About Announcements
                 </h3>
-                <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
+                <ul className="text-text-secondary leading-relaxed pl-6 space-y-2">
                   <li>Announcements are posted by course coordinators and faculty</li>
                   <li>High priority announcements require immediate attention</li>
                   <li>Check this page regularly for updates and changes</li>
@@ -197,30 +182,30 @@ export default function Announcements() {
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
-                  <i className="fas fa-bell"></i> Stay Notified
+                <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
+                  <i className="fas fa-bell mr-2"></i> Stay Notified
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                <p className="text-text-secondary mb-6 text-center">
                   Get notified about new announcements and important updates.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div className="flex flex-col gap-4">
                   <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn-enhanced">
-                    <i className="fab fa-whatsapp"></i> WhatsApp Group
+                    <i className="fab fa-whatsapp mr-2"></i> WhatsApp Group
                   </a>
                   <Link href="/materials" className="btn-enhanced">
-                    <i className="fas fa-book"></i> Materials
+                    <i className="fas fa-book mr-2"></i> Materials
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Enhanced Priority Legend */}
-            <div className="enhanced-card" style={{ marginTop: '3rem' }}>
-              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
-                <i className="fas fa-legend"></i> Priority Legend
+            <div className="enhanced-card mt-12">
+              <h3 className="text-primary-blue mb-8 text-center text-xl font-semibold">
+                <i className="fas fa-legend mr-2"></i> Priority Legend
               </h3>
-              <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div className="flex gap-8 flex-wrap justify-center">
+                <div className="flex items-center gap-2">
                   <span 
                     className="tech-badge"
                     style={{ 
@@ -232,9 +217,9 @@ export default function Announcements() {
                   >
                     <i className="fas fa-exclamation-circle"></i> HIGH
                   </span>
-                  <span style={{ color: 'var(--text-secondary)' }}>Urgent - Requires immediate attention</span>
+                  <span className="text-text-secondary">Urgent - Requires immediate attention</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="flex items-center gap-2">
                   <span 
                     className="tech-badge"
                     style={{ 
@@ -246,9 +231,9 @@ export default function Announcements() {
                   >
                     <i className="fas fa-exclamation-triangle"></i> MEDIUM
                   </span>
-                  <span style={{ color: 'var(--text-secondary)' }}>Important - Should be read soon</span>
+                  <span className="text-text-secondary">Important - Should be read soon</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="flex items-center gap-2">
                   <span 
                     className="tech-badge"
                     style={{ 
@@ -260,17 +245,17 @@ export default function Announcements() {
                   >
                     <i className="fas fa-info-circle"></i> LOW
                   </span>
-                  <span style={{ color: 'var(--text-secondary)' }}>Informational - General updates</span>
+                  <span className="text-text-secondary">Informational - General updates</span>
                 </div>
               </div>
             </div>
 
             {/* Developer Note */}
-            <div className="card" style={{ marginTop: '2rem', background: 'rgba(0, 191, 255, 0.05)', borderColor: 'var(--primary-blue)' }}>
-              <h4 style={{ color: 'var(--primary-blue)', marginBottom: '1rem' }}>
-                <i className="fas fa-code"></i> Developer Note
+            <div className="enhanced-card mt-8 bg-primary-blue/5 border-primary-blue">
+              <h4 className="text-primary-blue mb-4 text-lg font-semibold">
+                <i className="fas fa-code mr-2"></i> Developer Note
               </h4>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+              <p className="text-text-secondary text-sm">
                 This page currently uses static demo data. To connect to an external source, 
                 add a fetch function similar to the Materials and Tasks pages, pointing to your 
                 announcements.json file on GitHub.

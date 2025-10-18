@@ -19,33 +19,15 @@ export default function About() {
 
       <Navbar />
       
-      <main>
+      <main className="overflow-x-hidden">
         {/* Hero Profile Section */}
         <section className="about-hero">
-          <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Animated Background Elements */}
-            <div className="floating-element" style={{
-              top: '20%',
-              left: '10%',
-              width: '100px',
-              height: '100px'
-            }}></div>
-            <div className="floating-element" style={{
-              top: '60%',
-              right: '15%',
-              width: '60px',
-              height: '60px'
-            }}></div>
+            <div className="floating-element w-24 h-24 top-20 left-10"></div>
+            <div className="floating-element w-16 h-16 top-60 right-15"></div>
             
-            <div style={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              textAlign: 'center', 
-              gap: '2rem',
-              padding: '4rem 0'
-            }}>
+            <div className="flex flex-col items-center justify-center text-center gap-8 py-16">
               {/* Profile Image with Enhanced Styling */}
               <div className="profile-image-container">
                 <div className="profile-image-inner">
@@ -54,80 +36,47 @@ export default function About() {
                     alt="Zeyad Eltmsah Profile Picture"
                     width={242}
                     height={242}
-                    style={{
-                      objectFit: 'cover',
-                      borderRadius: '50%'
-                    }}
+                    className="object-cover rounded-full"
                   />
                 </div>
               </div>
               
               {/* Name with Gradient Effect */}
               <div data-aos="fade-up" data-aos-delay="200">
-                <h1 className="gradient-text">
+                <h1 className="gradient-text text-4xl md:text-5xl lg:text-6xl mb-4">
                   Zeyad Eltmsah
                 </h1>
                 
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '1rem',
-                  marginTop: '1rem'
-                }}>
-                  <span style={{
-                    color: 'var(--primary-blue)',
-                    fontSize: '1.5rem',
-                    fontWeight: '600'
-                  }}>
+                <div className="flex items-center justify-center gap-4 mt-4">
+                  <span className="text-primary-blue text-xl md:text-2xl font-semibold">
                     🔐 Cyber Security Student
                   </span>
                 </div>
               </div>
               
               {/* Enhanced Description */}
-              <div data-aos="fade-up" data-aos-delay="400" style={{ 
-                maxWidth: '800px',
-                margin: '0 auto'
-              }}>
-                <p style={{ 
-                  color: 'var(--text-primary)', 
-                  fontSize: '1.3rem',
-                  lineHeight: '1.8',
-                  marginBottom: '1.5rem',
-                  fontWeight: '500'
-                }}>
+              <div data-aos="fade-up" data-aos-delay="400" className="max-w-4xl mx-auto">
+                <p className="text-text-primary text-lg md:text-xl leading-relaxed mb-6 font-medium">
                   Class of 2025 • Passionate about Leadership, Defense & Innovation
                 </p>
                 
-                <p style={{ 
-                  color: 'var(--text-secondary)', 
-                  fontSize: '1.1rem',
-                  lineHeight: '1.7',
-                  marginBottom: '2rem'
-                }}>
+                <p className="text-text-secondary text-base md:text-lg leading-relaxed mb-8">
                   Creating digital solutions for academic excellence and building bridges between technology and education.
                 </p>
                 
                 {/* Quick Stats */}
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  gap: '3rem',
-                  flexWrap: 'wrap',
-                  marginTop: '2rem'
-                }}>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>2025</div>
-                    <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Graduation Year</div>
+                <div className="flex justify-center gap-8 md:gap-12 flex-wrap mt-8">
+                  <div className="text-center">
+                    <div className="text-primary-blue text-3xl font-bold">2025</div>
+                    <div className="text-text-muted text-sm">Graduation Year</div>
                   </div>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>CS</div>
-                    <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Department</div>
+                  <div className="text-center">
+                    <div className="text-primary-blue text-3xl font-bold">CS</div>
+                    <div className="text-text-muted text-sm">Department</div>
                   </div>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>🐊</div>
-                    <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>ElTmsah</div>
+                  <div className="text-center">
+                    <div className="text-primary-blue text-3xl font-bold">🐊</div>
+                    <div className="text-text-muted text-sm">ElTmsah</div>
                   </div>
                 </div>
               </div>
@@ -136,33 +85,33 @@ export default function About() {
         </section>
 
         {/* About Platform Section */}
-        <section className="section">
-          <div className="container">
-            <div className="grid grid-2">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Personal Story */}
-              <div className="card" data-aos="fade-up">
-                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
-                  <i className="fas fa-user-circle"></i> Personal Story
+              <div className="enhanced-card" data-aos="fade-up">
+                <h3 className="text-primary-blue mb-6 text-xl font-semibold">
+                  <i className="fas fa-user-circle mr-2"></i> Personal Story
                 </h3>
                 
-                <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                  <p style={{ marginBottom: '1.5rem' }}>
+                <div className="text-text-secondary leading-relaxed">
+                  <p className="mb-6">
                     زياد محمد — Cyber Security 2025 — organizing course materials and facilitating study for the batch.
                   </p>
                   
-                  <p style={{ marginBottom: '1.5rem' }}>
+                  <p className="mb-6">
                     As a passionate student in the Cyber Security program, I believe in the power of technology 
                     to transform education. This platform represents my commitment to creating tools that help 
                     fellow students stay organized and succeed in their academic journey.
                   </p>
                   
-                  <p style={{ marginBottom: '1.5rem' }}>
+                  <p className="mb-6">
                     Beyond academics, I'm deeply interested in cybersecurity leadership, digital defense strategies, 
                     and innovative solutions that bridge the gap between theoretical knowledge and practical application.
                   </p>
                   
                   <div className="quote-box">
-                    <p style={{ margin: 0 }}>
+                    <p className="m-0">
                       "Building tomorrow's cybersecurity leaders, one platform at a time."
                     </p>
                   </div>
@@ -170,22 +119,22 @@ export default function About() {
               </div>
 
               {/* Platform Information */}
-              <div className="card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
-                  <i className="fas fa-rocket"></i> About This Platform
+              <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                <h3 className="text-primary-blue mb-6 text-xl font-semibold">
+                  <i className="fas fa-rocket mr-2"></i> About This Platform
                 </h3>
                 
-                <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                  <p style={{ marginBottom: '1.5rem' }}>
+                <div className="text-text-secondary leading-relaxed">
+                  <p className="mb-6">
                     The CyberSec'25 platform is a student-run initiative designed to centralize all course 
                     information in one convenient location. Built with modern web technologies, it provides 
                     a clean and efficient interface for accessing course materials, schedules, and announcements.
                   </p>
                   
-                  <h4 style={{ color: 'var(--accent-silver)', marginBottom: '1rem' }}>
-                    <i className="fas fa-star"></i> Key Features
+                  <h4 className="text-accent-silver mb-4 text-lg font-semibold">
+                    <i className="fas fa-star mr-2"></i> Key Features
                   </h4>
-                  <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+                  <ul className="mb-6 pl-6 space-y-2">
                     <li>Dynamic course materials with advanced search and filtering</li>
                     <li>Interactive class schedules for both Group A and Group B</li>
                     <li>Task management with real-time progress tracking</li>
@@ -195,64 +144,53 @@ export default function About() {
                     <li>Print-friendly schedule layouts</li>
                   </ul>
                   
-                          <h4 style={{ color: 'var(--accent-silver)', marginBottom: '1rem' }}>
-                            <i className="fas fa-star"></i> Platform Features
-                          </h4>
-                          <div style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            gap: '0.5rem',
-                            marginBottom: '1rem'
-                          }}>
-                            {['Modern Design', 'Responsive', 'Fast Loading', 'User Friendly', 'Mobile Ready', 'Secure'].map((feature) => (
-                              <span key={feature} className="tech-badge">
-                                {feature}
-                              </span>
-                            ))}
-                          </div>
+                  <h4 className="text-accent-silver mb-4 text-lg font-semibold">
+                    <i className="fas fa-star mr-2"></i> Platform Features
+                  </h4>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {['Modern Design', 'Responsive', 'Fast Loading', 'User Friendly', 'Mobile Ready', 'Secure'].map((feature) => (
+                      <span key={feature} className="tech-badge">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Skills & Achievements */}
-            <div className="card" style={{ marginTop: '3rem' }} data-aos="fade-up">
-              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
-                <i className="fas fa-trophy"></i> Skills & Focus Areas
+            <div className="enhanced-card mt-12" data-aos="fade-up">
+              <h3 className="text-primary-blue mb-8 text-center text-xl font-semibold">
+                <i className="fas fa-trophy mr-2"></i> Skills & Focus Areas
               </h3>
               
-              <div className="grid grid-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="skill-card">
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--primary-blue), #00FFFF)'
-                  }}>
+                  <div className="skill-icon bg-gradient-to-r from-primary-blue to-cyan-400">
                     <i className="fas fa-shield-alt"></i>
                   </div>
-                  <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Cybersecurity</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  <h4 className="text-text-primary mb-2 text-lg font-semibold">Cybersecurity</h4>
+                  <p className="text-text-secondary text-sm">
                     Network Security, Digital Defense, Risk Assessment
                   </p>
                 </div>
                 
                 <div className="skill-card">
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--success-green), #00FF88)'
-                  }}>
+                  <div className="skill-icon bg-gradient-to-r from-success-green to-green-400">
                     <i className="fas fa-code"></i>
                   </div>
-                  <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Development</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  <h4 className="text-text-primary mb-2 text-lg font-semibold">Development</h4>
+                  <p className="text-text-secondary text-sm">
                     Web Development, Full-Stack Solutions, UI/UX Design
                   </p>
                 </div>
                 
                 <div className="skill-card">
-                  <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--warning-orange), #FF8800)'
-                  }}>
+                  <div className="skill-icon bg-gradient-to-r from-warning-orange to-orange-400">
                     <i className="fas fa-users"></i>
                   </div>
-                  <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Leadership</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  <h4 className="text-text-primary mb-2 text-lg font-semibold">Leadership</h4>
+                  <p className="text-text-secondary text-sm">
                     Team Management, Project Coordination, Mentoring
                   </p>
                 </div>
@@ -260,110 +198,77 @@ export default function About() {
             </div>
 
             {/* Contact Section */}
-            <div className="card" style={{ marginTop: '3rem' }} data-aos="fade-up">
-              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
-                <i className="fas fa-envelope"></i> Get In Touch
+            <div className="enhanced-card mt-12" data-aos="fade-up">
+              <h3 className="text-primary-blue mb-8 text-center text-xl font-semibold">
+                <i className="fas fa-envelope mr-2"></i> Get In Touch
               </h3>
               
-              <div className="grid grid-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="contact-card">
-                  <div className="contact-icon" style={{
-                    background: 'linear-gradient(45deg, #25D366, #128C7E)',
-                    boxShadow: '0 8px 25px rgba(37, 211, 102, 0.3)'
-                  }}>
+                  <div className="contact-icon bg-gradient-to-r from-green-500 to-green-600 shadow-lg shadow-green-500/30">
                     <i className="fab fa-whatsapp"></i>
                   </div>
-                  <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>WhatsApp</h4>
-                  <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  <h4 className="text-text-primary mb-2 text-lg font-semibold">WhatsApp</h4>
+                  <p className="text-text-secondary mb-4">
                     Quick support, questions, and discussions
                   </p>
                   <a 
                     href="https://wa.me/201553450232" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn btn-primary"
-                    style={{ 
-                      background: '#25D366',
-                      borderColor: '#25D366',
-                      boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
-                    }}
+                    className="btn-enhanced bg-green-500 hover:bg-green-600"
                   >
-                    <i className="fab fa-whatsapp"></i> Contact Now
+                    <i className="fab fa-whatsapp mr-2"></i> Contact Now
                   </a>
                 </div>
                 
                 <div className="contact-card">
-                  <div className="contact-icon" style={{
-                    background: 'linear-gradient(45deg, var(--primary-blue), #0099CC)',
-                    boxShadow: '0 8px 25px rgba(0, 191, 255, 0.3)'
-                  }}>
+                  <div className="contact-icon bg-gradient-to-r from-primary-blue to-primary-blue-hover shadow-lg shadow-primary-blue/30">
                     <i className="fas fa-graduation-cap"></i>
                   </div>
-                  <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Academic</h4>
-                  <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  <h4 className="text-text-primary mb-2 text-lg font-semibold">Academic</h4>
+                  <p className="text-text-secondary mb-4">
                     Course discussions and academic support
                   </p>
-                  <Link href="/materials" className="btn">
-                    <i className="fas fa-book"></i> View Materials
+                  <Link href="/materials" className="btn-enhanced">
+                    <i className="fas fa-book mr-2"></i> View Materials
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Development Info */}
-            <div className="card" style={{ 
-              marginTop: '3rem', 
-              background: 'linear-gradient(135deg, rgba(0, 191, 255, 0.05), rgba(0, 255, 255, 0.02))', 
-              borderColor: 'var(--primary-blue)',
-              borderWidth: '2px',
-              position: 'relative',
-              overflow: 'hidden'
-            }} data-aos="fade-up">
-              <div style={{
-                position: 'absolute',
-                top: '-50%',
-                right: '-50%',
-                width: '200px',
-                height: '200px',
-                background: 'radial-gradient(circle, rgba(0, 191, 255, 0.1), transparent)',
-                borderRadius: '50%',
-                animation: 'pulse 4s ease-in-out infinite'
-              }}></div>
+            <div className="enhanced-card mt-12 bg-gradient-to-br from-primary-blue/5 to-cyan-400/2 border-2 border-primary-blue relative overflow-hidden" data-aos="fade-up">
+              <div className="absolute -top-1/2 -right-1/2 w-48 h-48 bg-gradient-radial from-primary-blue/10 to-transparent rounded-full animate-pulse"></div>
               
-              <div style={{ position: 'relative', zIndex: 2 }}>
-                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
-                  <i className="fas fa-cogs"></i> Platform Status
+              <div className="relative z-10">
+                <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
+                  <i className="fas fa-cogs mr-2"></i> Platform Status
                 </h3>
                 
-                <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                  <p style={{ marginBottom: '1.5rem', textAlign: 'center', fontSize: '1.1rem' }}>
+                <div className="text-text-secondary leading-relaxed">
+                  <p className="mb-6 text-center text-lg">
                     This platform is actively maintained and updated by the student community. 
                     All course materials and schedules are managed through external data sources, 
                     making it easy to update content without redeploying the application.
                   </p>
                   
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    gap: '2rem',
-                    flexWrap: 'wrap',
-                    marginTop: '2rem'
-                  }}>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>24/7</div>
-                      <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Availability</div>
+                  <div className="flex justify-center gap-8 flex-wrap mt-8">
+                    <div className="text-center">
+                      <div className="text-primary-blue text-2xl font-bold">24/7</div>
+                      <div className="text-text-muted text-sm">Availability</div>
                     </div>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>100%</div>
-                      <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Student-Run</div>
+                    <div className="text-center">
+                      <div className="text-primary-blue text-2xl font-bold">100%</div>
+                      <div className="text-text-muted text-sm">Student-Run</div>
                     </div>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>Free</div>
-                      <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Forever</div>
+                    <div className="text-center">
+                      <div className="text-primary-blue text-2xl font-bold">Free</div>
+                      <div className="text-text-muted text-sm">Forever</div>
                     </div>
                   </div>
                   
-                  <p style={{ marginTop: '2rem', textAlign: 'center', fontStyle: 'italic' }}>
+                  <p className="mt-8 text-center italic">
                     If you encounter any issues or have suggestions for improvement, 
                     please don't hesitate to reach out via WhatsApp or through the course coordinators.
                   </p>

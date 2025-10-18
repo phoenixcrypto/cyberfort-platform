@@ -1,5 +1,6 @@
 // Announcements page with static demo content (easily convertible to external source)
 import Head from 'next/head'
+import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
@@ -179,9 +180,9 @@ export default function Announcements() {
                   <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn">
                     <i className="fab fa-whatsapp"></i> WhatsApp Group
                   </a>
-                  <a href="/materials" className="btn">
+                  <Link href="/materials" className="btn">
                     <i className="fas fa-book"></i> Materials
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 // Home page with dynamic preview sections and overview of the platform
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -89,12 +90,12 @@ export default function Home() {
               and announcements. Organized by students, for students.
             </p>
             <div data-aos="fade-up" data-aos-delay="400" style={{ marginTop: '2rem' }}>
-              <a href="/materials" className="btn btn-primary" style={{ marginRight: '1rem' }}>
+              <Link href="/materials" className="btn btn-primary" style={{ marginRight: '1rem' }}>
                 <i className="fas fa-book"></i> Browse Materials
-              </a>
-              <a href="/schedule" className="btn">
+              </Link>
+              <Link href="/schedule" className="btn">
                 <i className="fas fa-calendar"></i> View Schedule
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -113,7 +114,7 @@ export default function Home() {
                 </div>
                 <h3>Schedule</h3>
                 <p>Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.</p>
-                <a href="/schedule" className="btn">View Schedule</a>
+                <Link href="/schedule" className="btn">View Schedule</Link>
               </div>
               
               <div className="card" data-aos="fade-up" data-aos-delay="200">
@@ -122,7 +123,7 @@ export default function Home() {
                 </div>
                 <h3>Materials</h3>
                 <p>Download course materials, lecture notes, and resources. All organized by course and updated regularly.</p>
-                <a href="/materials" className="btn">Browse Materials</a>
+                <Link href="/materials" className="btn">Browse Materials</Link>
               </div>
               
               <div className="card" data-aos="fade-up" data-aos-delay="300">
@@ -131,7 +132,7 @@ export default function Home() {
                 </div>
                 <h3>Tasks</h3>
                 <p>Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.</p>
-                <a href="/tasks" className="btn">View Tasks</a>
+                <Link href="/tasks" className="btn">View Tasks</Link>
               </div>
             </div>
           </div>
@@ -162,7 +163,7 @@ export default function Home() {
                       <MaterialCard key={material.id} material={material} />
                     ))}
                     <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                      <a href="/materials" className="btn">View All Materials</a>
+                      <Link href="/materials" className="btn">View All Materials</Link>
                     </div>
                   </div>
                 ) : (
@@ -184,7 +185,7 @@ export default function Home() {
                       <span><i className="fas fa-calendar"></i> {formatDate(announcementsData.latest.date)}</span>
                     </div>
                     <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                      <a href="/announcements" className="btn">View All Announcements</a>
+                      <Link href="/announcements" className="btn">View All Announcements</Link>
                     </div>
                   </div>
                 ) : (
@@ -230,7 +231,7 @@ export default function Home() {
                   <p style={{ color: 'var(--text-muted)' }}>No schedule available yet.</p>
                 )}
                 <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                  <a href="/schedule" className="btn">View Full Schedule</a>
+                  <Link href="/schedule" className="btn">View Full Schedule</Link>
                 </div>
               </div>
             </div>

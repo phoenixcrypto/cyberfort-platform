@@ -1,5 +1,6 @@
 // Schedule page with Group A/B toggle and responsive table layout
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -171,9 +172,9 @@ export default function Schedule() {
                       Get notified about schedule changes and important updates.
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                      <a href="/announcements" className="btn">
+                      <Link href="/announcements" className="btn">
                         <i className="fas fa-bullhorn"></i> Announcements
-                      </a>
+                      </Link>
                       <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn">
                         <i className="fab fa-whatsapp"></i> WhatsApp
                       </a>

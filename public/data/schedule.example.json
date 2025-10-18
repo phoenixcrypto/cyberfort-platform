@@ -1,0 +1,114 @@
+{
+  "groupA": [
+    {
+      "day": "Monday",
+      "time": "10:00-11:00",
+      "course": "Mathematics",
+      "location": "Hall A"
+    },
+    {
+      "day": "Monday",
+      "time": "11:00-12:00",
+      "course": "Programming",
+      "location": "Lab 1"
+    },
+    {
+      "day": "Tuesday",
+      "time": "09:00-10:00",
+      "course": "Information Systems",
+      "location": "Hall B"
+    },
+    {
+      "day": "Tuesday",
+      "time": "10:00-11:00",
+      "course": "Databases",
+      "location": "Lab 2"
+    },
+    {
+      "day": "Wednesday",
+      "time": "10:00-11:00",
+      "course": "Network Security",
+      "location": "Hall C"
+    },
+    {
+      "day": "Wednesday",
+      "time": "11:00-12:00",
+      "course": "Operating Systems",
+      "location": "Lab 3"
+    },
+    {
+      "day": "Thursday",
+      "time": "09:00-10:00",
+      "course": "Cryptography",
+      "location": "Hall A"
+    },
+    {
+      "day": "Thursday",
+      "time": "10:00-11:00",
+      "course": "Web Security",
+      "location": "Lab 1"
+    },
+    {
+      "day": "Friday",
+      "time": "16:00-17:00",
+      "course": "Mathematics",
+      "location": "Hall A"
+    }
+  ],
+  "groupB": [
+    {
+      "day": "Monday",
+      "time": "14:00-15:00",
+      "course": "Mathematics",
+      "location": "Hall A"
+    },
+    {
+      "day": "Monday",
+      "time": "15:00-16:00",
+      "course": "Programming",
+      "location": "Lab 1"
+    },
+    {
+      "day": "Tuesday",
+      "time": "13:00-14:00",
+      "course": "Information Systems",
+      "location": "Hall B"
+    },
+    {
+      "day": "Tuesday",
+      "time": "14:00-15:00",
+      "course": "Databases",
+      "location": "Lab 2"
+    },
+    {
+      "day": "Wednesday",
+      "time": "14:00-15:00",
+      "course": "Network Security",
+      "location": "Hall C"
+    },
+    {
+      "day": "Wednesday",
+      "time": "15:00-16:00",
+      "course": "Operating Systems",
+      "location": "Lab 3"
+    },
+    {
+      "day": "Thursday",
+      "time": "13:00-14:00",
+      "course": "Cryptography",
+      "location": "Hall A"
+    },
+    {
+      "day": "Thursday",
+      "time": "14:00-15:00",
+      "course": "Web Security",
+      "location": "Lab 1"
+    },
+    {
+      "day": "Friday",
+      "time": "17:00-18:00",
+      "course": "Mathematics",
+      "location": "Hall A"
+    }
+  ]
+}

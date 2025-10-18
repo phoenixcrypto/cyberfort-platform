@@ -1,0 +1,27 @@
+// Footer component with copyright and social links
+import Link from 'next/link'
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-links">
+          <Link href="/" className="footer-link">Home</Link>
+          <Link href="/schedule" className="footer-link">Schedule</Link>
+          <Link href="/materials" className="footer-link">Materials</Link>
+          <Link href="/tasks" className="footer-link">Tasks</Link>
+          <Link href="/announcements" className="footer-link">Announcements</Link>
+          <Link href="/about" className="footer-link">About</Link>
+        </div>
+        <p className="footer-text">
+          © 2025 CyberSec'25 | Designed & Managed by ElTmsah 🐊
+        </p>
+        <p className="footer-text">
+          All course materials and schedules are managed by the student community
+        </p>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

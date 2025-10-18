@@ -1,0 +1,66 @@
+[
+  {
+    "id": "task-1",
+    "title": "Database Assignment 1: ER Diagram Design",
+    "course": "Databases",
+    "due_date": "2025-02-15",
+    "description": "Design an Entity-Relationship diagram for a university management system. Include at least 5 entities with proper relationships and attributes. Submit as PDF document.",
+    "status": "open"
+  },
+  {
+    "id": "task-2",
+    "title": "Network Security Lab Report",
+    "course": "Network Security",
+    "due_date": "2025-02-10",
+    "description": "Complete the network security lab exercises and submit a comprehensive report covering firewall configuration, intrusion detection, and vulnerability assessment.",
+    "status": "open"
+  },
+  {
+    "id": "task-3",
+    "title": "Cryptography Programming Project",
+    "course": "Cryptography",
+    "due_date": "2025-02-20",
+    "description": "Implement RSA encryption/decryption algorithm in Python. Include key generation, encryption, and decryption functions with proper error handling.",
+    "status": "done"
+  },
+  {
+    "id": "task-4",
+    "title": "Information Systems Case Study",
+    "course": "Information Systems",
+    "due_date": "2025-02-05",
+    "description": "Analyze a real-world information system case study. Identify system components, stakeholders, and provide recommendations for improvement.",
+    "status": "open"
+  },
+  {
+    "id": "task-5",
+    "title": "Mathematics Problem Set 3",
+    "course": "Mathematics",
+    "due_date": "2025-01-30",
+    "description": "Solve problems 1-15 from Chapter 3. Show all work and submit handwritten solutions. Problems cover linear algebra and matrix operations.",
+    "status": "done"
+  },
+  {
+    "id": "task-6",
+    "title": "Programming Project: Web Scraper",
+    "course": "Programming",
+    "due_date": "2025-02-25",
+    "description": "Create a web scraper using Python that extracts data from a specified website. Include data cleaning, storage, and basic analysis features.",
+    "status": "open"
+  },
+  {
+    "id": "task-7",
+    "title": "Operating Systems Process Simulation",
+    "course": "Operating Systems",
+    "due_date": "2025-02-12",
+    "description": "Simulate CPU scheduling algorithms (FCFS, SJF, Round Robin) and compare their performance using provided process data sets.",
+    "status": "open"
+  },
+  {
+    "id": "task-8",
+    "title": "Web Security Vulnerability Assessment",
+    "course": "Web Security",
+    "due_date": "2025-02-18",
+    "description": "Conduct a security assessment of a provided web application. Identify vulnerabilities and provide remediation recommendations.",
+    "status": "open"
+  }
+]

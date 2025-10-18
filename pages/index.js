@@ -139,7 +139,7 @@ export default function Home() {
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="100">
                 <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--neon-blue), #00FFFF)',
+                    background: 'linear-gradient(45deg, var(--primary-blue), #00FFFF)',
                     margin: '0 auto'
                   }}>
                     <i className="fas fa-calendar-alt"></i>
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="grid-enhanced grid-enhanced-2">
               {/* Latest Materials */}
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="100">
-                <h3 style={{ marginBottom: '2rem', color: 'var(--neon-blue)', textAlign: 'center' }}>
+                <h3 style={{ marginBottom: '2rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
                   <i className="fas fa-book"></i> Recent Materials
                 </h3>
                 {loading ? (
@@ -234,7 +234,7 @@ export default function Home() {
 
               {/* Latest Announcement */}
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ marginBottom: '2rem', color: 'var(--neon-blue)', textAlign: 'center' }}>
+                <h3 style={{ marginBottom: '2rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
                   <i className="fas fa-bullhorn"></i> Latest Announcement
                 </h3>
                 {announcementsData?.latest ? (
@@ -277,7 +277,7 @@ export default function Home() {
                 <h2>Today's Schedule Preview</h2>
               </div>
               <div className="enhanced-card" data-aos="fade-up">
-                <h3 style={{ marginBottom: '1.5rem', color: 'var(--neon-blue)', textAlign: 'center' }}>
+                <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary-blue)', textAlign: 'center' }}>
                   <i className="fas fa-calendar-check"></i> Group A - Next Classes
                 </h3>
                 {scheduleData.groupA && scheduleData.groupA.length > 0 ? (
@@ -290,7 +290,7 @@ export default function Home() {
                         padding: '1rem',
                         background: 'rgba(0, 191, 255, 0.1)',
                         borderRadius: '10px',
-                        borderLeft: '4px solid var(--neon-blue)',
+                        borderLeft: '4px solid var(--primary-blue)',
                         transition: 'all 0.3s ease'
                       }}>
                         <div>
@@ -299,7 +299,7 @@ export default function Home() {
                           <small style={{ color: 'var(--text-muted)' }}><i className="fas fa-map-marker-alt"></i> {classItem.location}</small>
                         </div>
                         <div style={{ textAlign: 'right' }}>
-                          <span style={{ color: 'var(--neon-blue)', fontWeight: '600', fontSize: '1.1rem' }}>
+                          <span style={{ color: 'var(--primary-blue)', fontWeight: '600', fontSize: '1.1rem' }}>
                             {classItem.day}
                           </span>
                           <br />

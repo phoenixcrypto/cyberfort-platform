@@ -68,7 +68,7 @@ export default function Announcements() {
       case 'medium':
         return 'var(--warning-orange)'
       case 'low':
-        return 'var(--neon-blue)'
+        return 'var(--primary-blue)'
       default:
         return 'var(--text-muted)'
     }
@@ -166,10 +166,10 @@ export default function Announcements() {
                           <i className={getPriorityIcon(announcement.priority)}></i> {announcement.priority.toUpperCase()}
                         </span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-user" style={{ color: 'var(--neon-blue)' }}></i> {announcement.author}
+                          <i className="fas fa-user" style={{ color: 'var(--primary-blue)' }}></i> {announcement.author}
                         </span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-calendar" style={{ color: 'var(--neon-blue)' }}></i> {formatDate(announcement.date)}
+                          <i className="fas fa-calendar" style={{ color: 'var(--primary-blue)' }}></i> {formatDate(announcement.date)}
                         </span>
                       </div>
                     </div>
@@ -185,7 +185,7 @@ export default function Announcements() {
             {/* Enhanced Information Section */}
             <div className="grid-enhanced grid-enhanced-2" style={{ marginTop: '4rem' }}>
               <div className="enhanced-card" data-aos="fade-up">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                   <i className="fas fa-info-circle"></i> About Announcements
                 </h3>
                 <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
@@ -197,7 +197,7 @@ export default function Announcements() {
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                   <i className="fas fa-bell"></i> Stay Notified
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', textAlign: 'center' }}>
@@ -216,7 +216,7 @@ export default function Announcements() {
 
             {/* Enhanced Priority Legend */}
             <div className="enhanced-card" style={{ marginTop: '3rem' }}>
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
                 <i className="fas fa-legend"></i> Priority Legend
               </h3>
               <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -252,7 +252,7 @@ export default function Announcements() {
                   <span 
                     className="tech-badge"
                     style={{ 
-                      background: 'var(--neon-blue)',
+                      background: 'var(--primary-blue)',
                       color: 'var(--bg-primary)',
                       fontSize: '0.8rem',
                       fontWeight: '600'
@@ -266,8 +266,8 @@ export default function Announcements() {
             </div>
 
             {/* Developer Note */}
-            <div className="card" style={{ marginTop: '2rem', background: 'rgba(0, 191, 255, 0.05)', borderColor: 'var(--neon-blue)' }}>
-              <h4 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+            <div className="card" style={{ marginTop: '2rem', background: 'rgba(0, 191, 255, 0.05)', borderColor: 'var(--primary-blue)' }}>
+              <h4 style={{ color: 'var(--primary-blue)', marginBottom: '1rem' }}>
                 <i className="fas fa-code"></i> Developer Note
               </h4>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>

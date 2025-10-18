@@ -76,7 +76,7 @@ export default function About() {
                   marginTop: '1rem'
                 }}>
                   <span style={{
-                    color: 'var(--neon-blue)',
+                    color: 'var(--primary-blue)',
                     fontSize: '1.5rem',
                     fontWeight: '600'
                   }}>
@@ -118,15 +118,15 @@ export default function About() {
                   marginTop: '2rem'
                 }}>
                   <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--neon-blue)', fontSize: '2rem', fontWeight: 'bold' }}>2025</div>
+                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>2025</div>
                     <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Graduation Year</div>
                   </div>
                   <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--neon-blue)', fontSize: '2rem', fontWeight: 'bold' }}>CS</div>
+                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>CS</div>
                     <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Department</div>
                   </div>
                   <div style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'var(--neon-blue)', fontSize: '2rem', fontWeight: 'bold' }}>🐊</div>
+                    <div style={{ color: 'var(--primary-blue)', fontSize: '2rem', fontWeight: 'bold' }}>🐊</div>
                     <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>ElTmsah</div>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function About() {
             <div className="grid grid-2">
               {/* Personal Story */}
               <div className="card" data-aos="fade-up">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem' }}>
+                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
                   <i className="fas fa-user-circle"></i> Personal Story
                 </h3>
                 
@@ -171,7 +171,7 @@ export default function About() {
 
               {/* Platform Information */}
               <div className="card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem' }}>
+                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
                   <i className="fas fa-rocket"></i> About This Platform
                 </h3>
                 
@@ -195,35 +195,35 @@ export default function About() {
                     <li>Print-friendly schedule layouts</li>
                   </ul>
                   
-                  <h4 style={{ color: 'var(--accent-silver)', marginBottom: '1rem' }}>
-                    <i className="fas fa-code"></i> Technology Stack
-                  </h4>
-                  <div style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem',
-                    marginBottom: '1rem'
-                  }}>
-                    {['Next.js', 'React', 'CSS3', 'AOS', 'Font Awesome', 'Google Fonts'].map((tech) => (
-                      <span key={tech} className="tech-badge">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                          <h4 style={{ color: 'var(--accent-silver)', marginBottom: '1rem' }}>
+                            <i className="fas fa-star"></i> Platform Features
+                          </h4>
+                          <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: '0.5rem',
+                            marginBottom: '1rem'
+                          }}>
+                            {['Modern Design', 'Responsive', 'Fast Loading', 'User Friendly', 'Mobile Ready', 'Secure'].map((feature) => (
+                              <span key={feature} className="tech-badge">
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
                 </div>
               </div>
             </div>
 
             {/* Skills & Achievements */}
             <div className="card" style={{ marginTop: '3rem' }} data-aos="fade-up">
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
                 <i className="fas fa-trophy"></i> Skills & Focus Areas
               </h3>
               
               <div className="grid grid-3">
                 <div className="skill-card">
                   <div className="skill-icon" style={{
-                    background: 'linear-gradient(45deg, var(--neon-blue), #00FFFF)'
+                    background: 'linear-gradient(45deg, var(--primary-blue), #00FFFF)'
                   }}>
                     <i className="fas fa-shield-alt"></i>
                   </div>
@@ -261,7 +261,7 @@ export default function About() {
 
             {/* Contact Section */}
             <div className="card" style={{ marginTop: '3rem' }} data-aos="fade-up">
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
                 <i className="fas fa-envelope"></i> Get In Touch
               </h3>
               
@@ -294,7 +294,7 @@ export default function About() {
                 
                 <div className="contact-card">
                   <div className="contact-icon" style={{
-                    background: 'linear-gradient(45deg, var(--neon-blue), #0099CC)',
+                    background: 'linear-gradient(45deg, var(--primary-blue), #0099CC)',
                     boxShadow: '0 8px 25px rgba(0, 191, 255, 0.3)'
                   }}>
                     <i className="fas fa-graduation-cap"></i>
@@ -314,7 +314,7 @@ export default function About() {
             <div className="card" style={{ 
               marginTop: '3rem', 
               background: 'linear-gradient(135deg, rgba(0, 191, 255, 0.05), rgba(0, 255, 255, 0.02))', 
-              borderColor: 'var(--neon-blue)',
+              borderColor: 'var(--primary-blue)',
               borderWidth: '2px',
               position: 'relative',
               overflow: 'hidden'
@@ -331,14 +331,14 @@ export default function About() {
               }}></div>
               
               <div style={{ position: 'relative', zIndex: 2 }}>
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
-                  <i className="fas fa-cogs"></i> Platform Development
+                <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                  <i className="fas fa-cogs"></i> Platform Status
                 </h3>
                 
                 <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
                   <p style={{ marginBottom: '1.5rem', textAlign: 'center', fontSize: '1.1rem' }}>
                     This platform is actively maintained and updated by the student community. 
-                    All course materials and schedules are managed through external JSON files, 
+                    All course materials and schedules are managed through external data sources, 
                     making it easy to update content without redeploying the application.
                   </p>
                   
@@ -350,15 +350,15 @@ export default function About() {
                     marginTop: '2rem'
                   }}>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--neon-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>24/7</div>
+                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>24/7</div>
                       <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Availability</div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--neon-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>100%</div>
+                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>100%</div>
                       <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Student-Run</div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'var(--neon-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>Free</div>
+                      <div style={{ color: 'var(--primary-blue)', fontSize: '1.5rem', fontWeight: 'bold' }}>Free</div>
                       <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Forever</div>
                     </div>
                   </div>

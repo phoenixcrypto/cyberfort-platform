@@ -97,7 +97,7 @@ export default function Materials() {
         <section className="section">
           <div className="container">
             <div className="enhanced-card" data-aos="fade-up">
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '2rem', textAlign: 'center' }}>
                 <i className="fas fa-filter"></i> Search & Filter
               </h3>
               <div style={{ 
@@ -162,16 +162,12 @@ export default function Materials() {
             )}
 
             <div className="enhanced-card" style={{ marginTop: '3rem', textAlign: 'center' }}>
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
-                <i className="fas fa-info-circle"></i> Setup Instructions
+              <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1rem' }}>
+                <i className="fas fa-info-circle"></i> Information
               </h3>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                To connect this page to your GitHub repository, replace the MATERIALS_JSON_URL in the source code 
-                with your actual GitHub raw URL pointing to your materials.json file.
+                All course materials are organized and updated regularly for easy access.
               </p>
-              <div className="tech-badge" style={{ margin: '0.5rem' }}>
-                <i className="fab fa-github"></i> GitHub Integration
-              </div>
             </div>
           </div>
         </section>

@@ -116,7 +116,7 @@ export default function Schedule() {
                     gap: '1rem'
                   }}>
                     <div>
-                      <h2 style={{ color: 'var(--neon-blue)', marginBottom: '0.5rem' }}>
+                      <h2 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>
                         <i className="fas fa-calendar-alt"></i> Schedule - {selectedGroup === 'groupA' ? 'Group A' : 'Group B'}
                       </h2>
                       <p style={{ color: 'var(--text-muted)' }}>
@@ -162,7 +162,7 @@ export default function Schedule() {
                         {currentSchedule.map((classItem, index) => (
                           <tr key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                             <td>
-                              <strong style={{ color: 'var(--neon-blue)' }}>{classItem.day}</strong>
+                              <strong style={{ color: 'var(--primary-blue)' }}>{classItem.day}</strong>
                             </td>
                             <td>
                               <span className="schedule-time" style={{ 
@@ -180,7 +180,7 @@ export default function Schedule() {
                               <span className="schedule-location" style={{ 
                                 color: 'var(--text-secondary)'
                               }}>
-                                <i className="fas fa-map-marker-alt" style={{ color: 'var(--neon-blue)' }}></i> {classItem.location}
+                                <i className="fas fa-map-marker-alt" style={{ color: 'var(--primary-blue)' }}></i> {classItem.location}
                               </span>
                             </td>
                           </tr>
@@ -201,7 +201,7 @@ export default function Schedule() {
                 {/* Enhanced Additional Information */}
                 <div className="grid-enhanced grid-enhanced-2" style={{ marginTop: '3rem' }}>
                   <div className="enhanced-card" data-aos="fade-up">
-                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                    <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                       <i className="fas fa-info-circle"></i> Schedule Information
                     </h3>
                     <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
@@ -213,7 +213,7 @@ export default function Schedule() {
                   </div>
                   
                   <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                    <h3 style={{ color: 'var(--primary-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                       <i className="fas fa-bell"></i> Stay Updated
                     </h3>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', textAlign: 'center' }}>

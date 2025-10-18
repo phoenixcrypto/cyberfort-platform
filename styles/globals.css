@@ -3,20 +3,21 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* CSS Variables for consistent theming */
+/* Professional Global Color Palette */
 :root {
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #1A1A1A;
-  --neon-blue: #00BFFF;
-  --neon-blue-hover: #0099CC;
-  --text-primary: #E0E0E0;
-  --text-secondary: #C0C0C0;
-  --text-muted: #888888;
-  --accent-silver: #C0C0C0;
-  --border-color: #333333;
-  --success-green: #00FF88;
-  --warning-orange: #FF8800;
-  --error-red: #FF4444;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --primary-blue: #0d6efd;
+  --primary-blue-hover: #0056b3;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --accent-silver: #6c757d;
+  --border-color: #e9ecef;
+  --success-green: #198754;
+  --warning-orange: #fd7e14;
+  --error-red: #dc3545;
+  --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
 /* Reset and base styles */
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(45deg, var(--neon-blue), var(--accent-silver));
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-silver));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -57,7 +58,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  color: var(--neon-blue);
+  color: var(--primary-blue);
 }
 
 h3 {
@@ -76,14 +77,14 @@ p {
 }
 
 a {
-  color: var(--neon-blue);
+  color: var(--primary-blue);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--neon-blue-hover);
-  text-shadow: 0 0 10px var(--neon-blue);
+  color: var(--primary-blue-hover);
+  text-shadow: 0 0 10px var(--primary-blue);
 }
 
 /* Layout containers */
@@ -136,9 +137,9 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
-  border: 2px solid var(--neon-blue);
+  border: 2px solid var(--primary-blue);
   background: transparent;
-  color: var(--neon-blue);
+  color: var(--primary-blue);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -150,20 +151,20 @@ a:hover {
 }
 
 .btn:hover {
-  background: var(--neon-blue);
+  background: var(--primary-blue);
   color: var(--bg-primary);
-  box-shadow: 0 0 20px var(--neon-blue);
+  box-shadow: 0 0 20px var(--primary-blue);
   transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: var(--neon-blue);
+  background: var(--primary-blue);
   color: var(--bg-primary);
 }
 
 .btn-primary:hover {
-  background: var(--neon-blue-hover);
-  box-shadow: 0 0 25px var(--neon-blue-hover);
+  background: var(--primary-blue-hover);
+  box-shadow: 0 0 25px var(--primary-blue-hover);
 }
 
 /* Cards */
@@ -184,7 +185,7 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
   transition: left 0.5s ease;
 }
 
@@ -193,7 +194,7 @@ a:hover {
 }
 
 .card:hover {
-  border-color: var(--neon-blue);
+  border-color: var(--primary-blue);
   box-shadow: 0 10px 30px rgba(0, 191, 255, 0.1);
   transform: translateY(-5px);
 }
@@ -216,7 +217,7 @@ a:hover {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--neon-blue);
+  border-color: var(--primary-blue);
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
 }
 
@@ -246,7 +247,7 @@ a:hover {
 }
 
 .badge-info {
-  background: var(--neon-blue);
+  background: var(--primary-blue);
   color: var(--bg-primary);
 }
 
@@ -262,7 +263,7 @@ a:hover {
   width: 40px;
   height: 40px;
   border: 3px solid var(--border-color);
-  border-top: 3px solid var(--neon-blue);
+  border-top: 3px solid var(--primary-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -407,10 +408,10 @@ a:hover {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 4px solid var(--neon-blue);
+  border: 4px solid var(--primary-blue);
   box-shadow: 0 0 30px rgba(0, 191, 255, 0.4), 0 0 60px rgba(0, 191, 255, 0.2);
   overflow: hidden;
-  background: linear-gradient(45deg, var(--neon-blue), var(--accent-silver));
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-silver));
   padding: 4px;
   animation: glow 3s ease-in-out infinite;
 }
@@ -424,22 +425,22 @@ a:hover {
 }
 
 .gradient-text {
-  background: linear-gradient(45deg, var(--neon-blue), #00FFFF, var(--accent-silver));
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 3.5rem;
   margin: 0;
-  font-family: 'Orbitron', monospace;
-  text-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 .floating-element {
   position: absolute;
-  border: 2px solid rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(13, 110, 253, 0.1);
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
+  background: rgba(13, 110, 253, 0.05);
 }
 
 .floating-element:nth-child(2) {
@@ -448,8 +449,8 @@ a:hover {
 }
 
 .tech-badge {
-  background: var(--neon-blue);
-  color: var(--bg-primary);
+  background: var(--primary-blue);
+  color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -479,7 +480,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: var(--bg-primary);
+  color: white;
 }
 
 .contact-card {
@@ -504,28 +505,29 @@ a:hover {
   justify-content: center;
   font-size: 2.5rem;
   color: white;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .quote-box {
-  background: rgba(0, 191, 255, 0.1);
+  background: rgba(13, 110, 253, 0.1);
   padding: 1rem;
   border-radius: 8px;
-  border-left: 4px solid var(--neon-blue);
+  border-left: 4px solid var(--primary-blue);
   margin-top: 1rem;
   font-style: italic;
-  color: var(--neon-blue);
+  color: var(--primary-blue);
 }
 
-/* Enhanced Card Styles for All Pages */
+/* Professional Card Styles */
 .enhanced-card {
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(10, 10, 10, 0.9));
-  border: 1px solid rgba(0, 191, 255, 0.2);
-  border-radius: 15px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow-light);
 }
 
 .enhanced-card::before {
@@ -535,27 +537,27 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 191, 255, 0.05), transparent);
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.02), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .enhanced-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 191, 255, 0.2);
-  border-color: var(--neon-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-blue);
 }
 
 .enhanced-card:hover::before {
   opacity: 1;
 }
 
-/* Enhanced Hero Section */
+/* Professional Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,9 +570,8 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-  animation: pulse 8s ease-in-out infinite;
+  background: radial-gradient(circle at 20% 20%, rgba(13, 110, 253, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(13, 110, 253, 0.03) 0%, transparent 50%);
 }
 
 .hero-content {
@@ -581,20 +582,20 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Enhanced Button Styles */
+/* Professional Button Styles */
 .btn-enhanced {
-  background: linear-gradient(45deg, var(--neon-blue), #0099CC);
+  background: var(--primary-blue);
   border: none;
-  color: var(--bg-primary);
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
 }
 
 .btn-enhanced::before {
@@ -609,8 +610,9 @@ a:hover {
 }
 
 .btn-enhanced:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 191, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+  background: var(--primary-blue-hover);
 }
 
 .btn-enhanced:hover::before {
@@ -652,7 +654,7 @@ a:hover {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(45deg, var(--neon-blue), var(--accent-silver));
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-silver));
   border-radius: 2px;
 }
 
@@ -661,9 +663,9 @@ a:hover {
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(0, 191, 255, 0.3);
+  border: 3px solid rgba(13, 110, 253, 0.3);
   border-radius: 50%;
-  border-top-color: var(--neon-blue);
+  border-top-color: var(--primary-blue);
   animation: spin 1s ease-in-out infinite;
 }
 
@@ -673,8 +675,8 @@ a:hover {
 
 /* Enhanced Error States */
 .error-card {
-  background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 68, 68, 0.05));
-  border: 1px solid rgba(255, 68, 68, 0.3);
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+  border: 1px solid rgba(220, 53, 69, 0.3);
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
@@ -683,10 +685,10 @@ a:hover {
 
 /* Enhanced Search and Filter Styles */
 .search-enhanced {
-  background: rgba(26, 26, 26, 0.8);
-  border: 2px solid rgba(0, 191, 255, 0.3);
-  border-radius: 25px;
-  padding: 1rem 1.5rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
   color: var(--text-primary);
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -696,8 +698,8 @@ a:hover {
 
 .search-enhanced:focus {
   outline: none;
-  border-color: var(--neon-blue);
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
 }
 
 .search-enhanced::placeholder {
@@ -706,9 +708,9 @@ a:hover {
 
 /* Enhanced Filter Buttons */
 .filter-btn {
-  background: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(0, 191, 255, 0.3);
-  border-radius: 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   padding: 0.5rem 1rem;
   color: var(--text-primary);
   transition: all 0.3s ease;
@@ -717,10 +719,10 @@ a:hover {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: var(--neon-blue);
-  color: var(--bg-primary);
-  border-color: var(--neon-blue);
-  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
 }
 
 /* Responsive Design for All Pages */
@@ -804,17 +806,18 @@ a:hover {
   }
 }
 
-/* Enhanced Navbar Styles */
+/* Professional Navbar Styles */
 .enhanced-navbar {
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.9));
+  background: var(--bg-primary);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 10px var(--shadow-light);
 }
 
 .enhanced-navbar.scrolled {
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.98), rgba(26, 26, 26, 0.95));
-  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .enhanced-logo {
@@ -825,10 +828,10 @@ a:hover {
 .logo-text {
   position: relative;
   z-index: 2;
-  font-family: 'Orbitron', monospace;
-  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
-  background: linear-gradient(45deg, var(--neon-blue), #00FFFF);
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -841,7 +844,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, var(--neon-blue), #00FFFF);
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-hover));
   opacity: 0;
   filter: blur(10px);
   transition: opacity 0.3s ease;
@@ -874,7 +877,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 191, 255, 0.1), rgba(0, 255, 255, 0.05));
+  background: linear-gradient(45deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -895,7 +898,7 @@ a:hover {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(45deg, var(--neon-blue), #00FFFF);
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-hover));
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -910,8 +913,7 @@ a:hover {
 
 .enhanced-nav-link:hover .nav-text,
 .enhanced-nav-link.active .nav-text {
-  color: var(--neon-blue);
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  color: var(--primary-blue);
 }
 
 .enhanced-toggle {
@@ -928,7 +930,7 @@ a:hover {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--neon-blue);
+  background: var(--primary-blue);
   margin: 5px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -946,10 +948,10 @@ a:hover {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Enhanced Footer Styles */
+/* Professional Footer Styles */
 .enhanced-footer {
-  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
-  border-top: 1px solid rgba(0, 191, 255, 0.2);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
 }
@@ -961,7 +963,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 191, 255, 0.05), transparent);
+  background: radial-gradient(circle at 50% 0%, rgba(13, 110, 253, 0.03), transparent);
 }
 
 .footer-content {
@@ -992,7 +994,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 191, 255, 0.1);
+  background: rgba(13, 110, 253, 0.1);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 6px;
@@ -1003,15 +1005,14 @@ a:hover {
 }
 
 .footer-link:hover {
-  color: var(--neon-blue);
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  color: var(--primary-blue);
 }
 
 .footer-text {
   text-align: center;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 191, 255, 0.2);
+  border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   position: relative;
 }
@@ -1024,5 +1025,71 @@ a:hover {
   transform: translateX(-50%);
   width: 60px;
   height: 1px;
-  background: linear-gradient(45deg, var(--neon-blue), var(--accent-silver));
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-hover));
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #25D366, #128C7E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 1000;
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  font-size: 30px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover .whatsapp-icon {
+  transform: scale(1.1);
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-icon {
+    font-size: 24px;
+  }
 }

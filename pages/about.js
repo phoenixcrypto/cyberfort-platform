@@ -1,5 +1,6 @@
 // About page with profile information and contact details
 import Head from 'next/head'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
@@ -18,6 +19,58 @@ export default function About() {
       <Navbar />
       
       <main>
+        {/* Profile Section */}
+        <section style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          textAlign: 'center', 
+          gap: '1rem', 
+          minHeight: '100vh',
+          padding: '2rem'
+        }}>
+          <div style={{
+            width: '220px',
+            height: '220px',
+            borderRadius: '50%',
+            border: '3px solid #00FFFF',
+            boxShadow: '0 4px 20px rgba(0, 255, 255, 0.3)',
+            overflow: 'hidden',
+            position: 'relative'
+          }}>
+            <Image
+              src="/assets/images/profile.jpg"
+              alt="Zeyad ElTmsah Profile Picture"
+              width={220}
+              height={220}
+              style={{
+                objectFit: 'cover',
+                borderRadius: '50%'
+              }}
+            />
+          </div>
+          
+          <h1 style={{ 
+            color: '#00FFFF', 
+            fontWeight: 'bold',
+            fontSize: '2.5rem',
+            margin: '1rem 0 0.5rem 0'
+          }}>
+            Zeyad (ElTmsah)
+          </h1>
+          
+          <p style={{ 
+            color: 'var(--text-secondary)', 
+            fontSize: '1.2rem',
+            lineHeight: '1.6',
+            maxWidth: '600px'
+          }}>
+            Student in Cyber Security Department — Class of 2025 🔐<br/>
+            Passionate about leadership, defense, and innovation.
+          </p>
+        </section>
+
         <section className="page-header">
           <div className="container">
             <h1 data-aos="fade-up">About</h1>

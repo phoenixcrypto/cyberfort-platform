@@ -100,68 +100,95 @@ export default function Announcements() {
       <Navbar />
       
       <main>
-        <section className="page-header">
+        {/* Enhanced Hero Section */}
+        <section className="hero-section">
           <div className="container">
-            <h1 data-aos="fade-up">Announcements</h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-              Stay updated with the latest announcements, schedule changes, and important information.
-            </p>
+            <div className="hero-content" data-aos="fade-up">
+              {/* Animated Background Elements */}
+              <div className="floating-element" style={{
+                top: '20%',
+                left: '10%',
+                width: '80px',
+                height: '80px'
+              }}></div>
+              <div className="floating-element" style={{
+                top: '60%',
+                right: '12%',
+                width: '60px',
+                height: '60px'
+              }}></div>
+              
+              <h1 className="gradient-text" style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>
+                Announcements
+              </h1>
+              <p className="lead" style={{ 
+                fontSize: '1.2rem', 
+                marginBottom: '2rem',
+                color: 'var(--text-primary)',
+                fontWeight: '500'
+              }}>
+                Stay updated with the latest announcements, schedule changes, and important information.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="section">
           <div className="container">
-            {/* Announcements List */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            {/* Enhanced Announcements List */}
+            <div className="grid-enhanced" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               {announcements.map((announcement, index) => (
                 <div 
                   key={announcement.id} 
-                  className="card" 
+                  className="enhanced-card" 
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                   style={{
-                    borderLeft: `4px solid ${getPriorityColor(announcement.priority)}`
+                    borderLeft: `4px solid ${getPriorityColor(announcement.priority)}`,
+                    position: 'relative'
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
                     <div style={{ flex: 1 }}>
-                      <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                      <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)', fontSize: '1.5rem' }}>
                         {announcement.title}
                       </h3>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
                         <span 
-                          className="badge"
+                          className="tech-badge"
                           style={{ 
                             background: getPriorityColor(announcement.priority),
-                            color: 'var(--bg-primary)'
+                            color: 'var(--bg-primary)',
+                            fontSize: '0.8rem',
+                            fontWeight: '600'
                           }}
                         >
                           <i className={getPriorityIcon(announcement.priority)}></i> {announcement.priority.toUpperCase()}
                         </span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-user"></i> {announcement.author}
+                          <i className="fas fa-user" style={{ color: 'var(--neon-blue)' }}></i> {announcement.author}
                         </span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                          <i className="fas fa-calendar"></i> {formatDate(announcement.date)}
+                          <i className="fas fa-calendar" style={{ color: 'var(--neon-blue)' }}></i> {formatDate(announcement.date)}
                         </span>
                       </div>
                     </div>
                   </div>
                   
-                  <div style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                  <div style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1rem' }}>
                     {announcement.content}
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Information Section */}
-            <div className="grid grid-2" style={{ marginTop: '4rem' }}>
-              <div className="card" data-aos="fade-up">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+            {/* Enhanced Information Section */}
+            <div className="grid-enhanced grid-enhanced-2" style={{ marginTop: '4rem' }}>
+              <div className="enhanced-card" data-aos="fade-up">
+                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                   <i className="fas fa-info-circle"></i> About Announcements
                 </h3>
-                <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+                <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
                   <li>Announcements are posted by course coordinators and faculty</li>
                   <li>High priority announcements require immediate attention</li>
                   <li>Check this page regularly for updates and changes</li>
@@ -169,36 +196,38 @@ export default function Announcements() {
                 </ul>
               </div>
               
-              <div className="card" data-aos="fade-up" data-aos-delay="200">
-                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+              <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                   <i className="fas fa-bell"></i> Stay Notified
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', textAlign: 'center' }}>
                   Get notified about new announcements and important updates.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn-enhanced">
                     <i className="fab fa-whatsapp"></i> WhatsApp Group
                   </a>
-                  <Link href="/materials" className="btn">
+                  <Link href="/materials" className="btn-enhanced">
                     <i className="fas fa-book"></i> Materials
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Priority Legend */}
-            <div className="card" style={{ marginTop: '2rem' }}>
-              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+            {/* Enhanced Priority Legend */}
+            <div className="enhanced-card" style={{ marginTop: '3rem' }}>
+              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
                 <i className="fas fa-legend"></i> Priority Legend
               </h3>
-              <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span 
-                    className="badge"
+                    className="tech-badge"
                     style={{ 
                       background: 'var(--error-red)',
-                      color: 'var(--bg-primary)'
+                      color: 'var(--bg-primary)',
+                      fontSize: '0.8rem',
+                      fontWeight: '600'
                     }}
                   >
                     <i className="fas fa-exclamation-circle"></i> HIGH
@@ -207,10 +236,12 @@ export default function Announcements() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span 
-                    className="badge"
+                    className="tech-badge"
                     style={{ 
                       background: 'var(--warning-orange)',
-                      color: 'var(--bg-primary)'
+                      color: 'var(--bg-primary)',
+                      fontSize: '0.8rem',
+                      fontWeight: '600'
                     }}
                   >
                     <i className="fas fa-exclamation-triangle"></i> MEDIUM
@@ -219,10 +250,12 @@ export default function Announcements() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span 
-                    className="badge"
+                    className="tech-badge"
                     style={{ 
                       background: 'var(--neon-blue)',
-                      color: 'var(--bg-primary)'
+                      color: 'var(--bg-primary)',
+                      fontSize: '0.8rem',
+                      fontWeight: '600'
                     }}
                   >
                     <i className="fas fa-info-circle"></i> LOW

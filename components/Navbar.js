@@ -31,32 +31,36 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar enhanced-navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <Link href="/" className="nav-logo">
-          CYBERSEC'25
+        <Link href="/" className="nav-logo enhanced-logo">
+          <span className="logo-text">CYBERSEC'25</span>
+          <span className="logo-glow"></span>
         </Link>
         
-        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+        <ul className={`nav-menu enhanced-nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
-            <li key={item.name}>
+            <li key={item.name} className="nav-item">
               <Link 
                 href={item.path}
-                className={`nav-link ${router.pathname === item.path ? 'active' : ''}`}
+                className={`nav-link enhanced-nav-link ${router.pathname === item.path ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item.name}
+                <span className="nav-text">{item.name}</span>
+                <span className="nav-underline"></span>
               </Link>
             </li>
           ))}
         </ul>
         
         <button 
-          className="mobile-menu-toggle"
+          className="mobile-menu-toggle enhanced-toggle"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          <i className="fas fa-bars"></i>
+          <span className={`bar ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`bar ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`bar ${isMobileMenuOpen ? 'active' : ''}`}></span>
         </button>
       </div>
     </nav>

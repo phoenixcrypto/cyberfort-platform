@@ -56,48 +56,132 @@ export default function Tasks() {
       </Head>
 
       <Navbar />
-      <main className="container">
-        <section className="page-header" data-aos="fade-up">
-          <h1>Tasks & Assignments</h1>
-          <p>Track open and completed tasks. Mark tasks complete locally for quick tracking.</p>
-        </section>
-
-        <section className="controls" data-aos="fade-up">
-          <div className="control-row">
-            <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)} aria-label="Filter by status">
-              <option value="all">All</option>
-              <option value="open">Open</option>
-              <option value="done">Done</option>
-            </select>
-
-            <select value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)} aria-label="Filter by course">
-              <option value="">All courses</option>
-              {courses.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
-
-            <input
-              type="text"
-              placeholder="Search tasks..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              aria-label="Search tasks"
-            />
+      <main>
+        {/* Enhanced Hero Section */}
+        <section className="hero-section">
+          <div className="container">
+            <div className="hero-content" data-aos="fade-up">
+              {/* Animated Background Elements */}
+              <div className="floating-element" style={{
+                top: '15%',
+                left: '8%',
+                width: '70px',
+                height: '70px'
+              }}></div>
+              <div className="floating-element" style={{
+                top: '75%',
+                right: '10%',
+                width: '50px',
+                height: '50px'
+              }}></div>
+              
+              <h1 className="gradient-text" style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>
+                Tasks & Assignments
+              </h1>
+              <p className="lead" style={{ 
+                fontSize: '1.2rem', 
+                marginBottom: '2rem',
+                color: 'var(--text-primary)',
+                fontWeight: '500'
+              }}>
+                Track open and completed tasks. Mark tasks complete locally for quick tracking.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="tasks-list" data-aos="fade-up">
-          {loading && <p>Loading tasks...</p>}
-          {error && <p style={{ color: 'var(--accent)' }}>Error: {error}</p>}
-          {!loading && !error && filtered.length === 0 && <p>No tasks found.</p>}
-          <div className="grid">
-            {filtered.map(t => (
-              <TaskCard key={t.id} task={t} onStatusToggle={onStatusToggle} />
-            ))}
-          </div>
+        {/* Enhanced Controls Section */}
+        <section className="section">
+          <div className="container">
+            <div className="enhanced-card" data-aos="fade-up">
+              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '2rem', textAlign: 'center' }}>
+                <i className="fas fa-filter"></i> Search & Filter Tasks
+              </h3>
+              <div style={{ 
+                display: 'flex', 
+                gap: '1rem', 
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+                <select 
+                  value={statusFilter} 
+                  onChange={(e) => setStatusFilter(e.target.value)} 
+                  aria-label="Filter by status"
+                  className="search-enhanced"
+                  style={{ maxWidth: '150px' }}
+                >
+                  <option value="all">All Status</option>
+                  <option value="open">Open</option>
+                  <option value="done">Done</option>
+                </select>
 
-          <div style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-            To connect this page to your GitHub repository, replace the TASKS_JSON_URL in the source code 
-            with your actual GitHub raw URL pointing to your tasks.json file.
+                <select 
+                  value={courseFilter} 
+                  onChange={(e) => setCourseFilter(e.target.value)} 
+                  aria-label="Filter by course"
+                  className="search-enhanced"
+                  style={{ maxWidth: '200px' }}
+                >
+                  <option value="">All courses</option>
+                  {courses.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+
+                <input
+                  type="text"
+                  placeholder="Search tasks..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  aria-label="Search tasks"
+                  className="search-enhanced"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Tasks List */}
+        <section className="section">
+          <div className="container">
+            {loading ? (
+              <div className="enhanced-card" style={{ textAlign: 'center' }}>
+                <div className="loading-spinner"></div>
+                <p style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Loading tasks...</p>
+              </div>
+            ) : error ? (
+              <div className="error-card">
+                <i className="fas fa-exclamation-triangle" style={{ fontSize: '2rem', marginBottom: '1rem' }}></i>
+                <h3 style={{ marginBottom: '1rem' }}>Error Loading Tasks</h3>
+                <p>{error}</p>
+              </div>
+            ) : filtered.length === 0 ? (
+              <div className="enhanced-card" style={{ textAlign: 'center' }}>
+                <i className="fas fa-search" style={{ fontSize: '3rem', color: 'var(--text-muted)', marginBottom: '1rem' }}></i>
+                <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>No Tasks Found</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Try adjusting your search terms or filters to find what you're looking for.
+                </p>
+              </div>
+            ) : (
+              <div className="grid-enhanced grid-enhanced-2" data-aos="fade-up">
+                {filtered.map(t => (
+                  <TaskCard key={t.id} task={t} onStatusToggle={onStatusToggle} />
+                ))}
+              </div>
+            )}
+
+            <div className="enhanced-card" style={{ marginTop: '3rem', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+                <i className="fas fa-info-circle"></i> Setup Instructions
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                To connect this page to your GitHub repository, replace the TASKS_JSON_URL in the source code 
+                with your actual GitHub raw URL pointing to your tasks.json file.
+              </p>
+              <div className="tech-badge" style={{ margin: '0.5rem' }}>
+                <i className="fab fa-github"></i> GitHub Integration
+              </div>
+            </div>
           </div>
         </section>
       </main>

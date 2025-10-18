@@ -58,57 +58,97 @@ export default function Schedule() {
       <Navbar />
       
       <main>
-        <section className="page-header">
+        {/* Enhanced Hero Section */}
+        <section className="hero-section">
           <div className="container">
-            <h1 data-aos="fade-up">Class Schedule</h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-              View your class schedule for Group A or Group B. Stay updated with any changes.
-            </p>
+            <div className="hero-content" data-aos="fade-up">
+              {/* Animated Background Elements */}
+              <div className="floating-element" style={{
+                top: '20%',
+                left: '10%',
+                width: '80px',
+                height: '80px'
+              }}></div>
+              <div className="floating-element" style={{
+                top: '60%',
+                right: '12%',
+                width: '60px',
+                height: '60px'
+              }}></div>
+              
+              <h1 className="gradient-text" style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>
+                Class Schedule
+              </h1>
+              <p className="lead" style={{ 
+                fontSize: '1.2rem', 
+                marginBottom: '2rem',
+                color: 'var(--text-primary)',
+                fontWeight: '500'
+              }}>
+                View your class schedule for Group A or Group B. Stay updated with any changes.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="section">
-          <div className="schedule-container">
+          <div className="container">
             {loading ? (
-              <div className="loading">
-                <div className="spinner"></div>
+              <div className="enhanced-card" style={{ textAlign: 'center' }}>
+                <div className="loading-spinner"></div>
+                <p style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Loading schedule...</p>
               </div>
             ) : error ? (
-              <div className="error">{error}</div>
+              <div className="error-card">
+                <i className="fas fa-exclamation-triangle" style={{ fontSize: '2rem', marginBottom: '1rem' }}></i>
+                <h3 style={{ marginBottom: '1rem' }}>Error Loading Schedule</h3>
+                <p>{error}</p>
+              </div>
             ) : (
               <>
-                <div className="schedule-header">
-                  <div>
-                    <h2>Schedule - {selectedGroup === 'groupA' ? 'Group A' : 'Group B'}</h2>
-                    <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-                      {currentSchedule.length} classes scheduled
-                    </p>
-                  </div>
-                  
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                    <div className="group-toggle">
-                      <button 
-                        className={`group-btn ${selectedGroup === 'groupA' ? 'active' : ''}`}
-                        onClick={() => setSelectedGroup('groupA')}
-                      >
-                        Group A
-                      </button>
-                      <button 
-                        className={`group-btn ${selectedGroup === 'groupB' ? 'active' : ''}`}
-                        onClick={() => setSelectedGroup('groupB')}
-                      >
-                        Group B
-                      </button>
+                {/* Enhanced Schedule Header */}
+                <div className="enhanced-card" data-aos="fade-up">
+                  <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: '1rem'
+                  }}>
+                    <div>
+                      <h2 style={{ color: 'var(--neon-blue)', marginBottom: '0.5rem' }}>
+                        <i className="fas fa-calendar-alt"></i> Schedule - {selectedGroup === 'groupA' ? 'Group A' : 'Group B'}
+                      </h2>
+                      <p style={{ color: 'var(--text-muted)' }}>
+                        {currentSchedule.length} classes scheduled
+                      </p>
                     </div>
                     
-                    <button onClick={handlePrint} className="btn">
-                      <i className="fas fa-print"></i> Print
-                    </button>
+                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                      <div className="group-toggle">
+                        <button 
+                          className={`filter-btn ${selectedGroup === 'groupA' ? 'active' : ''}`}
+                          onClick={() => setSelectedGroup('groupA')}
+                        >
+                          <i className="fas fa-users"></i> Group A
+                        </button>
+                        <button 
+                          className={`filter-btn ${selectedGroup === 'groupB' ? 'active' : ''}`}
+                          onClick={() => setSelectedGroup('groupB')}
+                        >
+                          <i className="fas fa-users"></i> Group B
+                        </button>
+                      </div>
+                      
+                      <button onClick={handlePrint} className="btn-enhanced">
+                        <i className="fas fa-print"></i> Print
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 {currentSchedule.length > 0 ? (
-                  <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
+                  <div className="enhanced-card" style={{ padding: '0', overflow: 'hidden' }} data-aos="fade-up">
                     <table className="schedule-table">
                       <thead>
                         <tr>
@@ -122,17 +162,25 @@ export default function Schedule() {
                         {currentSchedule.map((classItem, index) => (
                           <tr key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                             <td>
-                              <strong>{classItem.day}</strong>
+                              <strong style={{ color: 'var(--neon-blue)' }}>{classItem.day}</strong>
                             </td>
                             <td>
-                              <span className="schedule-time">{classItem.time}</span>
+                              <span className="schedule-time" style={{ 
+                                color: 'var(--text-primary)',
+                                fontWeight: '600'
+                              }}>{classItem.time}</span>
                             </td>
                             <td>
-                              <span className="schedule-course">{classItem.course}</span>
+                              <span className="schedule-course" style={{ 
+                                color: 'var(--text-primary)',
+                                fontWeight: '500'
+                              }}>{classItem.course}</span>
                             </td>
                             <td>
-                              <span className="schedule-location">
-                                <i className="fas fa-map-marker-alt"></i> {classItem.location}
+                              <span className="schedule-location" style={{ 
+                                color: 'var(--text-secondary)'
+                              }}>
+                                <i className="fas fa-map-marker-alt" style={{ color: 'var(--neon-blue)' }}></i> {classItem.location}
                               </span>
                             </td>
                           </tr>
@@ -141,22 +189,22 @@ export default function Schedule() {
                     </table>
                   </div>
                 ) : (
-                  <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
+                  <div className="enhanced-card" style={{ textAlign: 'center', padding: '3rem' }} data-aos="fade-up">
                     <i className="fas fa-calendar-times" style={{ fontSize: '4rem', color: 'var(--text-muted)', marginBottom: '1rem' }}></i>
-                    <h3>No Schedule Available</h3>
-                    <p style={{ color: 'var(--text-muted)' }}>
+                    <h3 style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>No Schedule Available</h3>
+                    <p style={{ color: 'var(--text-secondary)' }}>
                       Schedule for {selectedGroup === 'groupA' ? 'Group A' : 'Group B'} is not available yet.
                     </p>
                   </div>
                 )}
 
-                {/* Additional Information */}
-                <div className="grid grid-2" style={{ marginTop: '3rem' }}>
-                  <div className="card" data-aos="fade-up">
-                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+                {/* Enhanced Additional Information */}
+                <div className="grid-enhanced grid-enhanced-2" style={{ marginTop: '3rem' }}>
+                  <div className="enhanced-card" data-aos="fade-up">
+                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                       <i className="fas fa-info-circle"></i> Schedule Information
                     </h3>
-                    <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+                    <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
                       <li>Schedule is updated regularly by course coordinators</li>
                       <li>Any changes will be announced in the announcements section</li>
                       <li>Print-friendly version available using the print button</li>
@@ -164,18 +212,18 @@ export default function Schedule() {
                     </ul>
                   </div>
                   
-                  <div className="card" data-aos="fade-up" data-aos-delay="200">
-                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1rem' }}>
+                  <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style={{ color: 'var(--neon-blue)', marginBottom: '1.5rem', textAlign: 'center' }}>
                       <i className="fas fa-bell"></i> Stay Updated
                     </h3>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', textAlign: 'center' }}>
                       Get notified about schedule changes and important updates.
                     </p>
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                      <Link href="/announcements" className="btn">
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      <Link href="/announcements" className="btn-enhanced">
                         <i className="fas fa-bullhorn"></i> Announcements
                       </Link>
-                      <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn">
+                      <a href="https://wa.me/201553450232" target="_blank" rel="noopener noreferrer" className="btn-enhanced">
                         <i className="fab fa-whatsapp"></i> WhatsApp
                       </a>
                     </div>

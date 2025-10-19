@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lec-1",
+    "subject": "Information Systems",
+    "lecture_title": "Lecture 1 - Introduction",
+    "date": "2025-10-21",
+    "pdf_url": "https://drive.google.com/lecture1",
+    "full_material_ref": "https://drive.google.com/full-material-info-sys",
+    "description": "في هذه المحاضرة تم شرح المفاهيم الأساسية لنظم المعلومات مثل البيانات والمعلومات وأنواع نظم المعلومات وأمثلة تطبيقية."
+  },
+  {
+    "id": "lec-2",
+    "subject": "Mathematics",
+    "lecture_title": "Lecture 2 - Linear Algebra Basics",
+    "date": "2025-10-20",
+    "pdf_url": "https://drive.google.com/lecture2",
+    "full_material_ref": "https://drive.google.com/full-material-math",
+    "description": "Introduction to linear algebra concepts including vectors, matrices, and basic operations. This lecture covers fundamental mathematical concepts essential for cybersecurity applications."
+  },
+  {
+    "id": "lec-3",
+    "subject": "Programming",
+    "lecture_title": "Lecture 3 - Python Fundamentals",
+    "date": "2025-10-19",
+    "pdf_url": "https://drive.google.com/lecture3",
+    "full_material_ref": "https://drive.google.com/full-material-programming",
+    "description": "تعلم أساسيات البرمجة بلغة Python مع التركيز على المفاهيم الأساسية مثل المتغيرات والدوال والحلقات التكرارية."
+  },
+  {
+    "id": "lec-4",
+    "subject": "Network Security",
+    "lecture_title": "Lecture 4 - Network Protocols",
+    "date": "2025-10-18",
+    "pdf_url": "https://drive.google.com/lecture4",
+    "full_material_ref": "https://drive.google.com/full-material-network",
+    "description": "Understanding network protocols and their security implications. This lecture covers TCP/IP, HTTP/HTTPS, and common security vulnerabilities in network communications."
+  },
+  {
+    "id": "lec-5",
+    "subject": "Cryptography",
+    "lecture_title": "Lecture 5 - Encryption Methods",
+    "date": "2025-10-17",
+    "pdf_url": "https://drive.google.com/lecture5",
+    "full_material_ref": "https://drive.google.com/full-material-crypto",
+    "description": "Introduction to cryptographic concepts including symmetric and asymmetric encryption, digital signatures, and hash functions."
+  },
+  {
+    "id": "lec-6",
+    "subject": "Information Systems",
+    "lecture_title": "Lecture 6 - Database Security",
+    "date": "2025-10-16",
+    "pdf_url": "https://drive.google.com/lecture6",
+    "full_material_ref": "https://drive.google.com/full-material-info-sys",
+    "description": "أمان قواعد البيانات ومفاهيم الحماية من الهجمات الشائعة مثل SQL Injection وحماية البيانات الحساسة."
+  },
+  {
+    "id": "lec-7",
+    "subject": "Ethical Hacking",
+    "lecture_title": "Lecture 7 - Penetration Testing",
+    "date": "2025-10-15",
+    "pdf_url": "https://drive.google.com/lecture7",
+    "full_material_ref": "https://drive.google.com/full-material-ethical-hacking",
+    "description": "Introduction to penetration testing methodologies, tools, and ethical considerations in cybersecurity testing."
+  },
+  {
+    "id": "lec-8",
+    "subject": "Mathematics",
+    "lecture_title": "Lecture 8 - Probability Theory",
+    "date": "2025-10-14",
+    "pdf_url": "https://drive.google.com/lecture8",
+    "full_material_ref": "https://drive.google.com/full-material-math",
+    "description": "Probability theory fundamentals and their applications in cybersecurity risk assessment and statistical analysis."
+  }
+]

@@ -128,25 +128,6 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Platform Overview</h2>
             </div>
             
-            {/* Stats Section */}
-            <div className="stats-grid mb-16" data-aos="fade-up" data-aos-delay="100">
-              <div className="stat-card">
-                <div className="stat-value">150+</div>
-                <div className="stat-label">Active Students</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-value">25+</div>
-                <div className="stat-label">Course Materials</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-value">12</div>
-                <div className="stat-label">Weekly Classes</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-value">8</div>
-                <div className="stat-label">Subjects</div>
-              </div>
-            </div>
             
             <div className="feature-grid">
               <div className="feature-card enhanced-card-primary" data-aos="fade-up" data-aos-delay="100">
@@ -157,10 +138,10 @@ export default function Home() {
                 <p className="feature-description">
                   Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.
                 </p>
-                <div className="mt-6">
+                <div className="mt-4 mb-6">
                   <span className="badge badge-primary">Real-time Updates</span>
                 </div>
-                <Link href="/schedule" className="btn-enhanced w-full mt-6">
+                <Link href="/schedule" className="btn-enhanced w-full">
                   <i className="fas fa-calendar mr-2"></i> View Schedule
                 </Link>
               </div>
@@ -173,10 +154,10 @@ export default function Home() {
                 <p className="feature-description">
                   Download course materials, lecture notes, and resources. All organized by course and updated regularly.
                 </p>
-                <div className="mt-6">
+                <div className="mt-4 mb-6">
                   <span className="badge badge-success">Always Updated</span>
                 </div>
-                <Link href="/materials" className="btn-enhanced w-full mt-6">
+                <Link href="/materials" className="btn-enhanced w-full">
                   <i className="fas fa-book mr-2"></i> Browse Materials
                 </Link>
               </div>
@@ -189,10 +170,10 @@ export default function Home() {
                 <p className="feature-description">
                   Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.
                 </p>
-                <div className="mt-6">
+                <div className="mt-4 mb-6">
                   <span className="badge badge-warning">Deadline Tracking</span>
                 </div>
-                <Link href="/tasks" className="btn-enhanced w-full mt-6">
+                <Link href="/tasks" className="btn-enhanced w-full">
                   <i className="fas fa-tasks mr-2"></i> View Tasks
                 </Link>
               </div>

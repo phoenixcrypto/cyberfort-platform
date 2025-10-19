@@ -6,12 +6,16 @@ const Footer = () => {
     <footer className="footer enhanced-footer">
       <div className="footer-content">
         <div className="footer-links">
-          <Link href="/" className="footer-link">Home</Link>
-          <Link href="/schedule" className="footer-link">Schedule</Link>
-          <Link href="/materials" className="footer-link">Materials</Link>
-          <Link href="/tasks" className="footer-link">Tasks</Link>
-          <Link href="/announcements" className="footer-link">Announcements</Link>
-          <Link href="/about" className="footer-link">About</Link>
+          <div className="footer-row">
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="/schedule" className="footer-link">Schedule</Link>
+            <Link href="/materials" className="footer-link">Materials</Link>
+          </div>
+          <div className="footer-row">
+            <Link href="/tasks" className="footer-link">Tasks</Link>
+            <Link href="/announcements" className="footer-link">Announcements</Link>
+            <Link href="/about" className="footer-link">About</Link>
+          </div>
         </div>
         <p className="footer-text">
           © 2025 CyberSec'25 | Designed & Managed by ElTmsah 🐊

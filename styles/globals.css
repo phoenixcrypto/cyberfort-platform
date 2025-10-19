@@ -250,6 +250,15 @@ img, video, canvas {
     @apply opacity-100;
   }
 
+  /* Footer Row Component */
+  .footer-row {
+    @apply flex justify-center items-center gap-6 mb-2;
+  }
+  
+  .footer-links {
+    @apply flex flex-col items-center justify-center;
+  }
+
   /* WhatsApp Float Component */
   .whatsapp-float {
     @apply fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 opacity-0 scale-0 z-50 animate-whatsapp-pulse;
@@ -663,6 +672,15 @@ img, video, canvas {
   main {
     min-height: calc(100vh - 60px);
     overflow-y: visible;
+  }
+  
+  /* Footer responsive design */
+  .footer-row {
+    @apply gap-4;
+  }
+  
+  .footer-link {
+    @apply px-2 py-1 text-sm;
   }
 }
 

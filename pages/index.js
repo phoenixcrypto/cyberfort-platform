@@ -80,7 +80,7 @@ export default function Home() {
 
       <Navbar />
       
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden overflow-y-auto">
         {/* Enhanced Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -96,7 +96,7 @@ export default function About() {
                 
                 <div className="text-text-secondary leading-relaxed">
                   <p className="mb-6">
-                    زياد محمد — Cyber Security 2025 — organizing course materials and facilitating study for the batch.
+                    ZEYAD MOHAMED — Cyber Security 2025 — organizing course materials and facilitating study for the batch.
                   </p>
                   
                   <p className="mb-6">

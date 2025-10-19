@@ -129,7 +129,7 @@ export default function Home() {
             </div>
             
             
-            <div className="feature-grid">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="feature-card enhanced-card-primary" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-icon">
                   <i className="fas fa-calendar-alt"></i>

@@ -105,6 +105,19 @@ export default function Materials() {
 
       <Navbar />
       <main>
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="breadcrumb">
+            <div className="breadcrumb-item">
+              <Link href="/" className="breadcrumb-link">Home</Link>
+              <span className="breadcrumb-separator">/</span>
+            </div>
+            <div className="breadcrumb-item">
+              <span className="breadcrumb-current">Materials</span>
+            </div>
+          </div>
+        </div>
+
         {/* Enhanced Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +139,26 @@ export default function Materials() {
         {/* Enhanced Controls Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
+            {/* Materials Stats */}
+            <div className="stats-grid mb-12" data-aos="fade-up" data-aos-delay="100">
+              <div className="stat-card">
+                <div className="stat-value">{materials?.length || 0}</div>
+                <div className="stat-label">Total Materials</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">{lectures?.length || 0}</div>
+                <div className="stat-label">Lectures</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">{courses?.length || 0}</div>
+                <div className="stat-label">Courses</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">{filteredMaterials?.length || 0}</div>
+                <div className="stat-label">Filtered Results</div>
+              </div>
+            </div>
+
             <div className="enhanced-card" data-aos="fade-up">
               <h3 className="text-primary-blue mb-8 text-center text-xl font-semibold">
                 <i className="fas fa-filter mr-2"></i> Search & Filter

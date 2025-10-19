@@ -87,7 +87,7 @@ export default function Lecture() {
             <i className="fas fa-exclamation-triangle text-3xl mb-4"></i>
             <h3 className="mb-4 text-xl font-semibold">Lecture Not Found</h3>
             <p className="mb-6">{error || 'The requested lecture could not be found.'}</p>
-            <Link href="/materials" className="btn-enhanced">
+            <Link href="/materials" className="btn-enhanced btn-warning">
               <i className="fas fa-arrow-left mr-2"></i> Back to Materials
             </Link>
           </div>
@@ -110,6 +110,23 @@ export default function Lecture() {
       <Navbar />
       
       <main>
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="breadcrumb">
+            <div className="breadcrumb-item">
+              <Link href="/" className="breadcrumb-link">Home</Link>
+              <span className="breadcrumb-separator">/</span>
+            </div>
+            <div className="breadcrumb-item">
+              <Link href="/materials" className="breadcrumb-link">Materials</Link>
+              <span className="breadcrumb-separator">/</span>
+            </div>
+            <div className="breadcrumb-item">
+              <span className="breadcrumb-current">Lecture</span>
+            </div>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,7 +159,7 @@ export default function Lecture() {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               {/* Description */}
-              <div className="enhanced-card mb-8" data-aos="fade-up">
+              <div className="enhanced-card enhanced-card-primary mb-8" data-aos="fade-up">
                 <h3 className="text-primary-blue mb-6 text-xl font-semibold">
                   <i className="fas fa-info-circle mr-2"></i> Lecture Description
                 </h3>
@@ -156,7 +173,7 @@ export default function Lecture() {
 
               {/* Action Buttons */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="200">
-                <div className="enhanced-card text-center">
+                <div className="enhanced-card enhanced-card-success text-center">
                   <div className="mb-6">
                     <i className="fas fa-file-pdf text-4xl text-primary-blue mb-4"></i>
                     <h3 className="text-text-primary text-xl font-semibold mb-2">
@@ -168,13 +185,13 @@ export default function Lecture() {
                   </div>
                   <button 
                     onClick={handleDownload}
-                    className="btn-enhanced w-full"
+                    className="btn-enhanced btn-success w-full"
                   >
                     <i className="fas fa-download mr-2"></i> Download Lecture
                   </button>
                 </div>
 
-                <div className="enhanced-card text-center">
+                <div className="enhanced-card enhanced-card-accent text-center">
                   <div className="mb-6">
                     <i className="fas fa-book text-4xl text-accent-silver mb-4"></i>
                     <h3 className="text-text-primary text-xl font-semibold mb-2">
@@ -186,7 +203,7 @@ export default function Lecture() {
                   </div>
                   <button 
                     onClick={handleFullMaterial}
-                    className="btn-enhanced w-full bg-accent-silver hover:bg-accent-silver/80"
+                    className="btn-enhanced btn-info w-full"
                   >
                     <i className="fas fa-external-link-alt mr-2"></i> View Full Material
                   </button>
@@ -195,7 +212,7 @@ export default function Lecture() {
 
               {/* Back Button */}
               <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-                <Link href="/materials" className="btn-enhanced">
+                <Link href="/materials" className="btn-enhanced btn-warning">
                   <i className="fas fa-arrow-left mr-2"></i> Back to Materials
                 </Link>
               </div>

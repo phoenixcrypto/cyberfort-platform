@@ -58,6 +58,19 @@ export default function Schedule() {
       <Navbar />
       
       <main>
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="breadcrumb">
+            <div className="breadcrumb-item">
+              <Link href="/" className="breadcrumb-link">Home</Link>
+              <span className="breadcrumb-separator">/</span>
+            </div>
+            <div className="breadcrumb-item">
+              <span className="breadcrumb-current">Schedule</span>
+            </div>
+          </div>
+        </div>
+
         {/* Enhanced Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,6 +91,26 @@ export default function Schedule() {
 
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
+            {/* Schedule Stats */}
+            <div className="stats-grid mb-12" data-aos="fade-up" data-aos-delay="100">
+              <div className="stat-card">
+                <div className="stat-value">{scheduleData?.groupA?.length || 0}</div>
+                <div className="stat-label">Group A Classes</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">{scheduleData?.groupB?.length || 0}</div>
+                <div className="stat-label">Group B Classes</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">{(scheduleData?.groupA?.length || 0) + (scheduleData?.groupB?.length || 0)}</div>
+                <div className="stat-label">Total Classes</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">5</div>
+                <div className="stat-label">Days/Week</div>
+              </div>
+            </div>
+
             {loading ? (
               <div className="enhanced-card text-center">
                 <div className="loading-spinner"></div>
@@ -97,6 +130,7 @@ export default function Schedule() {
                     <div>
                       <h2 className="text-primary-blue mb-2 text-xl font-semibold">
                         <i className="fas fa-calendar-alt mr-2"></i> Schedule - {selectedGroup === 'groupA' ? 'Group A' : 'Group B'}
+                        <span className="badge badge-primary ml-2">Active</span>
                       </h2>
                       <p className="text-text-muted">
                         {currentSchedule.length} classes scheduled
@@ -110,12 +144,14 @@ export default function Schedule() {
                           onClick={() => setSelectedGroup('groupA')}
                         >
                           <i className="fas fa-users mr-2"></i> Group A
+                          <span className="badge badge-success ml-1">{scheduleData?.groupA?.length || 0}</span>
                         </button>
                         <button 
                           className={`filter-btn ${selectedGroup === 'groupB' ? 'active' : ''}`}
                           onClick={() => setSelectedGroup('groupB')}
                         >
                           <i className="fas fa-users mr-2"></i> Group B
+                          <span className="badge badge-warning ml-1">{scheduleData?.groupB?.length || 0}</span>
                         </button>
                       </div>
                       
@@ -141,7 +177,7 @@ export default function Schedule() {
                         {currentSchedule.map((classItem, index) => (
                           <tr key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                             <td>
-                              <strong className="text-primary-blue">{classItem.day}</strong>
+                              <span className="badge badge-primary">{classItem.day}</span>
                             </td>
                             <td>
                               <span className="schedule-time text-text-primary font-semibold">{classItem.time}</span>
@@ -163,27 +199,40 @@ export default function Schedule() {
                   <div className="enhanced-card text-center p-12" data-aos="fade-up">
                     <i className="fas fa-calendar-times text-6xl text-text-muted mb-4"></i>
                     <h3 className="text-text-primary mb-4 text-xl font-semibold">No Schedule Available</h3>
-                    <p className="text-text-secondary">
+                    <div className="alert alert-info">
+                      <i className="fas fa-info-circle mr-2"></i>
                       Schedule for {selectedGroup === 'groupA' ? 'Group A' : 'Group B'} is not available yet.
-                    </p>
+                    </div>
                   </div>
                 )}
 
                 {/* Enhanced Additional Information */}
                 <div className="grid-enhanced grid-enhanced-2 mt-12">
-                  <div className="enhanced-card" data-aos="fade-up">
+                  <div className="enhanced-card enhanced-card-primary" data-aos="fade-up">
                     <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
                       <i className="fas fa-info-circle mr-2"></i> Schedule Information
                     </h3>
-                    <ul className="text-text-secondary leading-relaxed pl-6 space-y-2">
-                      <li>Schedule is updated regularly by course coordinators</li>
-                      <li>Any changes will be announced in the announcements section</li>
-                      <li>Print-friendly version available using the print button</li>
-                      <li>Contact instructors for any schedule-related queries</li>
-                    </ul>
+                    <div className="space-y-4">
+                      <div className="alert alert-success">
+                        <i className="fas fa-check-circle mr-2"></i>
+                        Schedule is updated regularly by course coordinators
+                      </div>
+                      <div className="alert alert-warning">
+                        <i className="fas fa-bell mr-2"></i>
+                        Any changes will be announced in the announcements section
+                      </div>
+                      <div className="alert alert-info">
+                        <i className="fas fa-print mr-2"></i>
+                        Print-friendly version available using the print button
+                      </div>
+                      <div className="alert alert-error">
+                        <i className="fas fa-phone mr-2"></i>
+                        Contact instructors for any schedule-related queries
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                  <div className="enhanced-card enhanced-card-success" data-aos="fade-up" data-aos-delay="200">
                     <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
                       <i className="fas fa-bell mr-2"></i> Stay Updated
                     </h3>

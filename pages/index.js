@@ -85,6 +85,15 @@ export default function Home() {
       <Navbar />
       
       <main>
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="breadcrumb">
+            <div className="breadcrumb-item">
+              <span className="breadcrumb-current">Home</span>
+            </div>
+          </div>
+        </div>
+
         {/* Enhanced Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,48 +128,71 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Platform Overview</h2>
             </div>
             
-            <div className="grid-enhanced grid-enhanced-3">
-              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                <div className="text-center mb-6">
-                  <div className="skill-icon bg-gradient-to-r from-primary-blue to-cyan-400 mx-auto">
-                    <i className="fas fa-calendar-alt"></i>
-                  </div>
+            {/* Stats Section */}
+            <div className="stats-grid mb-16" data-aos="fade-up" data-aos-delay="100">
+              <div className="stat-card">
+                <div className="stat-value">150+</div>
+                <div className="stat-label">Active Students</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">25+</div>
+                <div className="stat-label">Course Materials</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">12</div>
+                <div className="stat-label">Weekly Classes</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">8</div>
+                <div className="stat-label">Subjects</div>
+              </div>
+            </div>
+            
+            <div className="feature-grid">
+              <div className="feature-card enhanced-card-primary" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-icon">
+                  <i className="fas fa-calendar-alt"></i>
                 </div>
-                <h3 className="text-center mb-4 text-xl font-semibold">Schedule</h3>
-                <p className="text-center mb-6 text-text-secondary flex-grow">
+                <h3 className="feature-title">Smart Schedule</h3>
+                <p className="feature-description">
                   Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.
                 </p>
-                <Link href="/schedule" className="btn-enhanced w-full mt-auto">
+                <div className="mt-6">
+                  <span className="badge badge-primary">Real-time Updates</span>
+                </div>
+                <Link href="/schedule" className="btn-enhanced w-full mt-6">
                   <i className="fas fa-calendar mr-2"></i> View Schedule
                 </Link>
               </div>
               
-              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="200">
-                <div className="text-center mb-6">
-                  <div className="skill-icon bg-gradient-to-r from-success-green to-green-400 mx-auto">
-                    <i className="fas fa-file-pdf"></i>
-                  </div>
+              <div className="feature-card enhanced-card-success" data-aos="fade-up" data-aos-delay="200">
+                <div className="feature-icon">
+                  <i className="fas fa-file-pdf"></i>
                 </div>
-                <h3 className="text-center mb-4 text-xl font-semibold">Materials</h3>
-                <p className="text-center mb-6 text-text-secondary flex-grow">
+                <h3 className="feature-title">Rich Materials</h3>
+                <p className="feature-description">
                   Download course materials, lecture notes, and resources. All organized by course and updated regularly.
                 </p>
-                <Link href="/materials" className="btn-enhanced w-full mt-auto">
+                <div className="mt-6">
+                  <span className="badge badge-success">Always Updated</span>
+                </div>
+                <Link href="/materials" className="btn-enhanced w-full mt-6">
                   <i className="fas fa-book mr-2"></i> Browse Materials
                 </Link>
               </div>
               
-              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="300">
-                <div className="text-center mb-6">
-                  <div className="skill-icon bg-gradient-to-r from-warning-orange to-orange-400 mx-auto">
-                    <i className="fas fa-tasks"></i>
-                  </div>
+              <div className="feature-card enhanced-card-warning" data-aos="fade-up" data-aos-delay="300">
+                <div className="feature-icon">
+                  <i className="fas fa-tasks"></i>
                 </div>
-                <h3 className="text-center mb-4 text-xl font-semibold">Tasks</h3>
-                <p className="text-center mb-6 text-text-secondary flex-grow">
+                <h3 className="feature-title">Task Management</h3>
+                <p className="feature-description">
                   Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.
                 </p>
-                <Link href="/tasks" className="btn-enhanced w-full mt-auto">
+                <div className="mt-6">
+                  <span className="badge badge-warning">Deadline Tracking</span>
+                </div>
+                <Link href="/tasks" className="btn-enhanced w-full mt-6">
                   <i className="fas fa-tasks mr-2"></i> View Tasks
                 </Link>
               </div>

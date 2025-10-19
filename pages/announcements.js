@@ -100,6 +100,19 @@ export default function Announcements() {
       <Navbar />
       
       <main>
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="breadcrumb">
+            <div className="breadcrumb-item">
+              <Link href="/" className="breadcrumb-link">Home</Link>
+              <span className="breadcrumb-separator">/</span>
+            </div>
+            <div className="breadcrumb-item">
+              <span className="breadcrumb-current">Announcements</span>
+            </div>
+          </div>
+        </div>
+
         {/* Enhanced Hero Section */}
         <section className="hero-section">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

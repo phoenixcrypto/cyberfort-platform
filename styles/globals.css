@@ -76,36 +76,36 @@ img, video, canvas {
 @layer components {
   /* Enhanced Card Component */
   .enhanced-card {
-    @apply bg-gradient-to-br from-gray-800/90 to-gray-900/95 border border-primary-blue/20 rounded-2xl p-8 transition-all duration-500 relative overflow-hidden shadow-2xl backdrop-blur-sm;
+    @apply bg-gradient-to-br from-gray-800/90 to-gray-900/95 border border-blue-500/20 rounded-2xl p-8 transition-all duration-500 relative overflow-hidden shadow-2xl backdrop-blur-sm;
   }
 
   /* Advanced Card Variants */
   .enhanced-card-primary {
-    @apply bg-gradient-to-br from-primary-blue/15 via-gray-800/90 to-primary-blue/10 border-primary-blue/40 shadow-primary-blue/20;
+    @apply bg-gradient-to-br from-blue-500/15 via-gray-800/90 to-blue-500/10 border-blue-500/40 shadow-blue-500/20;
   }
   
   .enhanced-card-success {
-    @apply bg-gradient-to-br from-success-green/15 via-gray-800/90 to-success-green/10 border-success-green/40 shadow-success-green/20;
+    @apply bg-gradient-to-br from-green-500/15 via-gray-800/90 to-green-500/10 border-green-500/40 shadow-green-500/20;
   }
   
   .enhanced-card-warning {
-    @apply bg-gradient-to-br from-warning-orange/15 via-gray-800/90 to-warning-orange/10 border-warning-orange/40 shadow-warning-orange/20;
+    @apply bg-gradient-to-br from-orange-500/15 via-gray-800/90 to-orange-500/10 border-orange-500/40 shadow-orange-500/20;
   }
   
   .enhanced-card-accent {
-    @apply bg-gradient-to-br from-accent-cyan/15 via-gray-800/90 to-accent-cyan/10 border-accent-cyan/40 shadow-accent-cyan/20;
+    @apply bg-gradient-to-br from-cyan-500/15 via-gray-800/90 to-cyan-500/10 border-cyan-500/40 shadow-cyan-500/20;
   }
   
   .enhanced-card-purple {
-    @apply bg-gradient-to-br from-secondary-purple/15 via-gray-800/90 to-secondary-purple/10 border-secondary-purple/40 shadow-secondary-purple/20;
+    @apply bg-gradient-to-br from-purple-500/15 via-gray-800/90 to-purple-500/10 border-purple-500/40 shadow-purple-500/20;
   }
   
   .enhanced-card::before {
-    @apply absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-secondary-purple/5 opacity-0 transition-opacity duration-500;
+    @apply absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 transition-opacity duration-500;
   }
   
   .enhanced-card:hover {
-    @apply -translate-y-2 shadow-2xl shadow-primary-blue/30 border-primary-blue/50;
+    @apply -translate-y-2 shadow-2xl shadow-blue-500/30 border-blue-500/50;
   }
   
   .enhanced-card:hover::before {
@@ -118,12 +118,12 @@ img, video, canvas {
   }
   
   .hero-section::before {
-    @apply absolute inset-0 bg-gradient-to-r from-primary-blue/10 via-transparent to-secondary-purple/10 animate-pulse;
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 animate-pulse;
   }
 
   /* Enhanced Button Component */
   .btn-enhanced {
-    @apply bg-gradient-to-r from-primary-blue to-secondary-purple border-0 text-bg-primary px-8 py-4 rounded-xl font-semibold uppercase tracking-wider transition-all duration-500 relative overflow-hidden shadow-lg hover:shadow-xl;
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 border-0 text-white px-8 py-4 rounded-xl font-semibold uppercase tracking-wider transition-all duration-500 relative overflow-hidden shadow-lg hover:shadow-xl;
   }
   
   .btn-enhanced::before {
@@ -131,7 +131,7 @@ img, video, canvas {
   }
   
   .btn-enhanced:hover {
-    @apply -translate-y-1 shadow-2xl shadow-primary-blue/40;
+    @apply -translate-y-1 shadow-2xl shadow-blue-500/40;
   }
   
   .btn-enhanced:hover::before {
@@ -140,45 +140,45 @@ img, video, canvas {
 
   /* Button Variants */
   .btn-success {
-    @apply bg-gradient-to-r from-success-green to-success-green-hover hover:shadow-success-green/40;
+    @apply bg-gradient-to-r from-green-500 to-green-600 hover:shadow-green-500/40;
   }
   
   .btn-warning {
-    @apply bg-gradient-to-r from-warning-orange to-warning-orange-hover hover:shadow-warning-orange/40;
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 hover:shadow-orange-500/40;
   }
   
   .btn-error {
-    @apply bg-gradient-to-r from-error-red to-error-red-hover hover:shadow-error-red/40;
+    @apply bg-gradient-to-r from-red-500 to-red-600 hover:shadow-red-500/40;
   }
   
   .btn-info {
-    @apply bg-gradient-to-r from-info-blue to-info-blue-hover hover:shadow-info-blue/40;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-blue-500/40;
   }
 
   /* Gradient Text Component */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-blue via-accent-cyan to-secondary-purple bg-clip-text text-transparent font-black text-4xl md:text-5xl lg:text-6xl font-orbitron;
+    @apply bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 bg-clip-text text-transparent font-black text-4xl md:text-5xl lg:text-6xl font-orbitron;
   }
 
   /* Advanced Typography Components */
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-primary-blue to-accent-cyan bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent;
   }
   
   .text-gradient-success {
-    @apply bg-gradient-to-r from-success-green to-accent-cyan bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent;
   }
   
   .text-gradient-warning {
-    @apply bg-gradient-to-r from-warning-orange to-error-red bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent;
   }
   
   .text-gradient-accent {
-    @apply bg-gradient-to-r from-accent-cyan to-secondary-purple bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent;
   }
   
   .text-gradient-purple {
-    @apply bg-gradient-to-r from-secondary-purple to-primary-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent;
   }
 
   /* Typography Scale */
@@ -816,19 +816,19 @@ img, video, canvas {
   }
   
   .badge-primary {
-    @apply bg-gradient-to-r from-primary-blue to-secondary-purple text-bg-primary;
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white;
   }
   
   .badge-success {
-    @apply bg-gradient-to-r from-success-green to-accent-cyan text-bg-primary;
+    @apply bg-gradient-to-r from-green-500 to-cyan-500 text-white;
   }
   
   .badge-warning {
-    @apply bg-gradient-to-r from-warning-orange to-error-red text-bg-primary;
+    @apply bg-gradient-to-r from-orange-500 to-red-500 text-white;
   }
   
   .badge-error {
-    @apply bg-gradient-to-r from-error-red to-warning-orange text-bg-primary;
+    @apply bg-gradient-to-r from-red-500 to-orange-500 text-white;
   }
 
   /* Alert Component */

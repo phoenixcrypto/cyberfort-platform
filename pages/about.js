@@ -126,29 +126,29 @@ export default function About() {
                 
                 <div className="text-text-secondary leading-relaxed">
                   <p className="mb-6">
-                    The CyberSec'25 platform is a student-run initiative designed to centralize all course 
-                    information in one convenient location. Built with modern web technologies, it provides 
-                    a clean and efficient interface for accessing course materials, schedules, and announcements.
+                    The CyberSec'25 platform is your one-stop destination for all course information. 
+                    Created by students, it brings together everything you need in one convenient place - 
+                    materials, schedules, assignments, and announcements.
                   </p>
                   
                   <h4 className="text-accent-silver mb-4 text-lg font-semibold">
-                    <i className="fas fa-star mr-2"></i> Key Features
+                    <i className="fas fa-star mr-2"></i> What You Can Do
                   </h4>
                   <ul className="mb-6 pl-6 space-y-2">
-                    <li>Dynamic course materials with advanced search and filtering</li>
-                    <li>Interactive class schedules for both Group A and Group B</li>
-                    <li>Task management with real-time progress tracking</li>
-                    <li>Instant announcements and important updates</li>
-                    <li>Fully responsive design for all devices</li>
-                    <li>WhatsApp integration for seamless communication</li>
-                    <li>Print-friendly schedule layouts</li>
+                    <li>Access all course materials and lecture notes</li>
+                    <li>View your class schedule for Group A or Group B</li>
+                    <li>Track your assignments and project deadlines</li>
+                    <li>Stay updated with important announcements</li>
+                    <li>Use the platform on any device - phone, tablet, or computer</li>
+                    <li>Get instant help through WhatsApp</li>
+                    <li>Print your schedule for offline reference</li>
                   </ul>
                   
                   <h4 className="text-accent-silver mb-4 text-lg font-semibold">
-                    <i className="fas fa-star mr-2"></i> Platform Features
+                    <i className="fas fa-heart mr-2"></i> Why Students Love It
                   </h4>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {['Modern Design', 'Responsive', 'Fast Loading', 'User Friendly', 'Mobile Ready', 'Secure'].map((feature) => (
+                    {['Easy to Use', 'Always Updated', 'Fast Access', 'Mobile Friendly', 'Free Forever', 'Student Made'].map((feature) => (
                       <span key={feature} className="tech-badge">
                         {feature}
                       </span>
@@ -237,40 +237,39 @@ export default function About() {
               </div>
             </div>
 
-            {/* Development Info */}
+            {/* Platform Info */}
             <div className="enhanced-card mt-12 bg-gradient-to-br from-primary-blue/5 to-cyan-400/2 border-2 border-primary-blue relative overflow-hidden" data-aos="fade-up">
-              <div className="absolute -top-1/2 -right-1/2 w-48 h-48 bg-gradient-radial from-primary-blue/10 to-transparent rounded-full animate-pulse"></div>
+              <div className="absolute -top-1/2 -right-1/2 w-48 h-48 bg-gradient-to-r from-primary-blue/10 to-transparent rounded-full animate-pulse"></div>
               
               <div className="relative z-10">
                 <h3 className="text-primary-blue mb-6 text-center text-xl font-semibold">
-                  <i className="fas fa-cogs mr-2"></i> Platform Status
+                  <i className="fas fa-users mr-2"></i> Student Community
                 </h3>
                 
                 <div className="text-text-secondary leading-relaxed">
                   <p className="mb-6 text-center text-lg">
-                    This platform is actively maintained and updated by the student community. 
-                    All course materials and schedules are managed through external data sources, 
-                    making it easy to update content without redeploying the application.
+                    This platform is created and maintained by students, for students. 
+                    Everything is designed to make your academic life easier and more organized.
                   </p>
                   
                   <div className="flex justify-center gap-8 flex-wrap mt-8">
                     <div className="text-center">
                       <div className="text-primary-blue text-2xl font-bold">24/7</div>
-                      <div className="text-text-muted text-sm">Availability</div>
+                      <div className="text-text-muted text-sm">Available</div>
                     </div>
                     <div className="text-center">
                       <div className="text-primary-blue text-2xl font-bold">100%</div>
-                      <div className="text-text-muted text-sm">Student-Run</div>
+                      <div className="text-text-muted text-sm">Free</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-primary-blue text-2xl font-bold">Free</div>
-                      <div className="text-text-muted text-sm">Forever</div>
+                      <div className="text-primary-blue text-2xl font-bold">Always</div>
+                      <div className="text-text-muted text-sm">Updated</div>
                     </div>
                   </div>
                   
                   <p className="mt-8 text-center italic">
-                    If you encounter any issues or have suggestions for improvement, 
-                    please don't hesitate to reach out via WhatsApp or through the course coordinators.
+                    Need help or have suggestions? Contact us anytime through WhatsApp or 
+                    reach out to your course coordinators.
                   </p>
                 </div>
               </div>

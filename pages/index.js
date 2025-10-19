@@ -120,54 +120,50 @@ export default function Home() {
             </div>
             
             <div className="grid-enhanced grid-enhanced-3">
-              <div className="enhanced-card" data-aos="fade-up" data-aos-delay="100">
+              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center mb-6">
                   <div className="skill-icon bg-gradient-to-r from-primary-blue to-cyan-400 mx-auto">
                     <i className="fas fa-calendar-alt"></i>
                   </div>
                 </div>
                 <h3 className="text-center mb-4 text-xl font-semibold">Schedule</h3>
-                <p className="text-center mb-6 text-text-secondary">
+                <p className="text-center mb-6 text-text-secondary flex-grow">
                   Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.
                 </p>
+                <Link href="/schedule" className="btn-enhanced w-full mt-auto">
+                  <i className="fas fa-calendar mr-2"></i> View Schedule
+                </Link>
               </div>
               
-              <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
+              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center mb-6">
                   <div className="skill-icon bg-gradient-to-r from-success-green to-green-400 mx-auto">
                     <i className="fas fa-file-pdf"></i>
                   </div>
                 </div>
                 <h3 className="text-center mb-4 text-xl font-semibold">Materials</h3>
-                <p className="text-center mb-6 text-text-secondary">
+                <p className="text-center mb-6 text-text-secondary flex-grow">
                   Download course materials, lecture notes, and resources. All organized by course and updated regularly.
                 </p>
+                <Link href="/materials" className="btn-enhanced w-full mt-auto">
+                  <i className="fas fa-book mr-2"></i> Browse Materials
+                </Link>
               </div>
               
-              <div className="enhanced-card" data-aos="fade-up" data-aos-delay="300">
+              <div className="enhanced-card flex flex-col" data-aos="fade-up" data-aos-delay="300">
                 <div className="text-center mb-6">
                   <div className="skill-icon bg-gradient-to-r from-warning-orange to-orange-400 mx-auto">
                     <i className="fas fa-tasks"></i>
                   </div>
                 </div>
                 <h3 className="text-center mb-4 text-xl font-semibold">Tasks</h3>
-                <p className="text-center mb-6 text-text-secondary">
+                <p className="text-center mb-6 text-text-secondary flex-grow">
                   Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.
                 </p>
+                <Link href="/tasks" className="btn-enhanced w-full mt-auto">
+                  <i className="fas fa-tasks mr-2"></i> View Tasks
+                </Link>
               </div>
-            </div>
-            
-            {/* All Buttons in One Row */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8" data-aos="fade-up" data-aos-delay="400">
-              <Link href="/schedule" className="btn-enhanced">
-                <i className="fas fa-calendar mr-2"></i> View Schedule
-              </Link>
-              <Link href="/materials" className="btn-enhanced">
-                <i className="fas fa-book mr-2"></i> Browse Materials
-              </Link>
-              <Link href="/tasks" className="btn-enhanced">
-                <i className="fas fa-tasks mr-2"></i> View Tasks
-              </Link>
             </div>
           </div>
         </section>

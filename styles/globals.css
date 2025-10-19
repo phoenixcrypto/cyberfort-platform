@@ -14,7 +14,7 @@ html {
   -ms-text-size-adjust: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: auto;
+  height: 100%;
 }
 
 body {
@@ -25,7 +25,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  min-height: 100vh;
+  height: auto;
 }
 
 /* Ensure images and elements don't exceed screen width */
@@ -537,37 +538,131 @@ img, video, canvas {
   }
   
   .hero-section {
-    @apply min-h-screen;
+    @apply min-h-screen py-8;
   }
   
   .gradient-text {
-    @apply text-3xl;
+    @apply text-3xl leading-tight;
   }
   
   .enhanced-card {
-    @apply p-6;
+    @apply p-4 mb-4;
   }
   
   .grid-enhanced-3 {
-    @apply grid-cols-1;
+    @apply grid-cols-1 gap-4;
   }
   
   .grid-enhanced-2 {
-    @apply grid-cols-1;
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .section-header h2 {
+    @apply text-2xl mb-6;
+  }
+  
+  .btn-enhanced {
+    @apply px-4 py-3 text-sm w-full mb-2;
+  }
+  
+  .search-filter-container {
+    @apply flex-col gap-2;
+  }
+  
+  .search-enhanced {
+    @apply w-full mb-2;
   }
 }
 
 @media (max-width: 480px) {
   .gradient-text {
-    @apply text-2xl;
+    @apply text-xl leading-tight;
   }
   
   .enhanced-card {
-    @apply p-4;
+    @apply p-3 mb-3;
   }
   
   .btn-enhanced {
-    @apply px-4 py-2 text-sm;
+    @apply px-3 py-2 text-xs w-full;
+  }
+  
+  .hero-section {
+    @apply py-4 min-h-screen;
+  }
+  
+  .section-header h2 {
+    @apply text-lg mb-4;
+  }
+  
+  .container {
+    @apply px-2;
+  }
+  
+  .whatsapp-float {
+    @apply bottom-4 right-4 w-12 h-12;
+  }
+  
+  .whatsapp-icon {
+    @apply text-xl;
+  }
+  
+  /* Extra small screens */
+  .hero-content p {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .enhanced-card h3 {
+    @apply text-base mb-3;
+  }
+  
+  .schedule-table {
+    @apply text-xs;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    @apply px-1 py-1;
+  }
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  html {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    overflow-y: visible;
+    position: relative;
+  }
+  
+  .hero-content {
+    @apply px-2;
+  }
+  
+  .hero-content p {
+    @apply text-base leading-relaxed;
+  }
+  
+  .enhanced-card h3 {
+    @apply text-lg mb-4;
+  }
+  
+  .schedule-table {
+    @apply text-xs;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    @apply px-2 py-2;
+  }
+  
+  /* Fix for mobile scrolling */
+  main {
+    min-height: calc(100vh - 60px);
+    overflow-y: visible;
   }
 }
 

@@ -19,7 +19,7 @@ export default function About() {
 
       <Navbar />
       
-      <main className="overflow-x-hidden overflow-y-auto">
+      <main>
         {/* Hero Profile Section */}
         <section className="about-hero">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

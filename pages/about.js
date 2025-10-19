@@ -9,13 +9,17 @@ import WhatsAppButton from '../components/WhatsAppButton'
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About – CyberSec'25 | ElTmsah</title>
-        <meta name="description" content="Meet Zeyad Eltmsah - Cyber Security 2025 student and creator of the CyberSec'25 platform. Passionate about leadership, defense, and innovation." />
+              <Head>
+                <title>About – CyberSec'25 | ElTmsah</title>
+                <meta name="description" content="Meet Zeyad Eltmsah - Cyber Security 2025 student and creator of the CyberSec'25 platform. Passionate about leadership, defense, and innovation." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-      </Head>
+                <link rel="icon" href="/favicon.ico" />
+                <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+                <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+                <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
+                <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+              </Head>
 
       <Navbar />
       

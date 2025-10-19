@@ -887,11 +887,13 @@ img, video, canvas {
   }
   
   .dropdown-menu {
-    @apply absolute right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-2xl border border-blue-500/20 backdrop-blur-xl z-50 opacity-0 invisible transition-all duration-300;
+    @apply absolute right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-2xl border border-blue-500/20 backdrop-blur-xl z-50 opacity-0 transition-all duration-300;
+    visibility: hidden;
   }
   
   .dropdown-menu.visible {
-    @apply opacity-100 visible;
+    @apply opacity-100;
+    visibility: visible;
   }
   
   .dropdown-item {

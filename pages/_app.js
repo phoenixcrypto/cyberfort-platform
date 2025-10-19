@@ -4,6 +4,7 @@ import '../styles/components.css'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -15,7 +16,12 @@ function MyApp({ Component, pageProps }) {
     })
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <SpeedInsights />
+    </>
+  )
 }
 
 export default MyApp

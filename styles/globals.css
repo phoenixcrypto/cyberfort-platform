@@ -114,7 +114,7 @@ img, video, canvas {
 
   /* Hero Section Component */
   .hero-section {
-    @apply bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary relative overflow-hidden min-h-screen flex items-center justify-center;
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden min-h-screen flex items-center justify-center;
   }
   
   .hero-section::before {
@@ -217,20 +217,20 @@ img, video, canvas {
   }
   
   .parallax-bg::before {
-    @apply absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-cyan-400/5;
+    @apply absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-400/5;
     content: '';
     animation: parallaxFloat 20s ease-in-out infinite;
   }
   
   .parallax-bg::after {
-    @apply absolute inset-0 bg-gradient-to-tl from-transparent via-primary-blue/3 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-tl from-transparent via-blue-500/3 to-transparent;
     content: '';
     animation: parallaxFloat 25s ease-in-out infinite reverse;
   }
 
   /* Advanced Floating Elements */
   .floating-element-advanced {
-    @apply absolute border border-primary-blue/20 rounded-full animate-float;
+    @apply absolute border border-blue-500/20 rounded-full animate-float;
     background: linear-gradient(45deg, transparent, rgba(0, 191, 255, 0.1), transparent);
   }
   
@@ -244,7 +244,7 @@ img, video, canvas {
 
   /* Tech Badge Component */
   .tech-badge {
-    @apply bg-primary-blue text-bg-primary px-3 py-1 rounded-full text-sm font-medium inline-block mx-1;
+    @apply bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium inline-block mx-1;
   }
 
   /* Skill Card Component */
@@ -253,12 +253,12 @@ img, video, canvas {
   }
   
   .skill-card:hover {
-    @apply -translate-y-1 shadow-lg shadow-primary-blue/20;
+    @apply -translate-y-1 shadow-lg shadow-blue-500/20;
   }
 
   /* Skill Icon Component */
   .skill-icon {
-    @apply w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl text-bg-primary;
+    @apply w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl text-white;
   }
 
   /* Contact Card Component */
@@ -267,7 +267,7 @@ img, video, canvas {
   }
   
   .contact-card:hover {
-    @apply -translate-y-1 shadow-xl shadow-primary-blue/20;
+    @apply -translate-y-1 shadow-xl shadow-blue-500/20;
   }
 
   /* Contact Icon Component */
@@ -277,45 +277,45 @@ img, video, canvas {
 
   /* Quote Box Component */
   .quote-box {
-    @apply bg-primary-blue/10 p-4 rounded-lg border-l-4 border-primary-blue mt-4 italic text-primary-blue;
+    @apply bg-blue-500/10 p-4 rounded-lg border-l-4 border-blue-500 mt-4 italic text-blue-500;
   }
 
   /* Loading Spinner Component */
   .loading-spinner {
-    @apply inline-block w-10 h-10 border-4 border-primary-blue/30 rounded-full border-t-primary-blue animate-spin;
+    @apply inline-block w-10 h-10 border-4 border-blue-500/30 rounded-full border-t-blue-500 animate-spin;
   }
 
   /* Error Card Component */
   .error-card {
-    @apply bg-gradient-to-br from-error-red/10 to-error-red/5 border border-error-red/30 rounded-lg p-8 text-center text-error-red;
+    @apply bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/30 rounded-lg p-8 text-center text-red-500;
   }
 
   /* Search Enhanced Component */
   .search-enhanced {
-    @apply bg-gray-800/80 border-2 border-primary-blue/30 rounded-lg px-4 py-3 text-text-primary text-base transition-all duration-300 w-full max-w-md;
+    @apply bg-gray-800/80 border-2 border-blue-500/30 rounded-lg px-4 py-3 text-white text-base transition-all duration-300 w-full max-w-md;
   }
   
   .search-enhanced:focus {
-    @apply outline-none border-primary-blue shadow-lg shadow-primary-blue/30;
+    @apply outline-none border-blue-500 shadow-lg shadow-blue-500/30;
   }
   
   .search-enhanced::placeholder {
-    @apply text-text-muted;
+    @apply text-gray-400;
   }
 
   /* Filter Button Component */
   .filter-btn {
-    @apply bg-gray-800/80 border border-primary-blue/30 rounded-lg px-4 py-2 text-text-primary transition-all duration-300 mx-1;
+    @apply bg-gray-800/80 border border-blue-500/30 rounded-lg px-4 py-2 text-white transition-all duration-300 mx-1;
   }
   
   .filter-btn:hover,
   .filter-btn.active {
-    @apply bg-primary-blue text-bg-primary border-primary-blue shadow-lg shadow-primary-blue/30;
+    @apply bg-blue-500 text-white border-blue-500 shadow-lg shadow-blue-500/30;
   }
 
   /* Enhanced Navbar Component */
   .enhanced-navbar {
-    @apply bg-gradient-to-r from-gray-900/90 to-gray-800/80 backdrop-blur-lg border-b border-primary-blue/20 transition-all duration-300 shadow-lg;
+    @apply bg-gradient-to-r from-gray-900/90 to-gray-800/80 backdrop-blur-lg border-b border-blue-500/20 transition-all duration-300 shadow-lg;
     position: relative;
     z-index: 50;
   }
@@ -339,7 +339,7 @@ img, video, canvas {
   }
   
   .nav-menu.active {
-    @apply flex flex-col absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-lg border-t border-primary-blue/20 shadow-lg;
+    @apply flex flex-col absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-lg border-t border-blue-500/20 shadow-lg;
   }
   
   /* Navbar Item */
@@ -353,7 +353,7 @@ img, video, canvas {
   }
   
   .mobile-menu-toggle .bar {
-    @apply w-6 h-0.5 bg-text-primary transition-all duration-300;
+    @apply w-6 h-0.5 bg-white transition-all duration-300;
     margin: 2px 0;
   }
   
@@ -370,7 +370,7 @@ img, video, canvas {
   }
   
   .enhanced-navbar.scrolled {
-    @apply bg-gradient-to-r from-gray-900/90 to-gray-800/80 shadow-xl shadow-primary-blue/10;
+    @apply bg-gradient-to-r from-gray-900/90 to-gray-800/80 shadow-xl shadow-blue-500/10;
   }
   
   /* Prevent clicking on empty navbar areas */
@@ -404,12 +404,12 @@ img, video, canvas {
 
   /* Logo Text Component */
   .logo-text {
-    @apply relative z-10 font-orbitron font-black text-2xl bg-gradient-to-r from-primary-blue to-cyan-400 bg-clip-text text-transparent transition-all duration-300;
+    @apply relative z-10 font-orbitron font-black text-2xl bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-300;
   }
 
   /* Logo Glow Component */
   .logo-glow {
-    @apply absolute inset-0 bg-gradient-to-r from-primary-blue to-cyan-400 opacity-0 blur-lg transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 blur-lg transition-opacity duration-300;
   }
 
   /* Enhanced Nav Link Component */
@@ -418,7 +418,7 @@ img, video, canvas {
   }
   
   .enhanced-nav-link::before {
-    @apply absolute inset-0 bg-gradient-to-br from-primary-blue/10 to-cyan-400/5 opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-400/5 opacity-0 transition-opacity duration-300;
   }
   
   .enhanced-nav-link:hover::before {
@@ -432,7 +432,7 @@ img, video, canvas {
 
   /* Nav Underline Component */
   .nav-underline {
-    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-blue to-cyan-400 transition-all duration-300 -translate-x-1/2;
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 -translate-x-1/2;
   }
   
   .enhanced-nav-link:hover .nav-underline {
@@ -445,11 +445,11 @@ img, video, canvas {
 
   /* Enhanced Footer Component */
   .enhanced-footer {
-    @apply bg-gradient-to-br from-bg-secondary to-bg-primary border-t border-primary-blue/20 relative overflow-hidden;
+    @apply bg-gradient-to-br from-gray-800 to-gray-900 border-t border-blue-500/20 relative overflow-hidden;
   }
   
   .enhanced-footer::before {
-    @apply absolute inset-0 bg-gradient-to-r from-primary-blue/5 via-transparent to-transparent;
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-transparent;
   }
 
   /* Footer Link Component */
@@ -458,7 +458,7 @@ img, video, canvas {
   }
   
   .footer-link::before {
-    @apply absolute inset-0 bg-primary-blue/10 opacity-0 transition-opacity duration-300 rounded-md;
+    @apply absolute inset-0 bg-blue-500/10 opacity-0 transition-opacity duration-300 rounded-md;
   }
   
   .footer-link:hover::before {
@@ -510,40 +510,40 @@ img, video, canvas {
   }
   
   .schedule-table th {
-    @apply bg-gradient-to-r from-primary-blue to-primary-blue-hover text-bg-primary px-4 py-4 text-left font-semibold text-sm uppercase tracking-wider;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-4 text-left font-semibold text-sm uppercase tracking-wider;
   }
   
   .schedule-table td {
-    @apply px-4 py-3 border-b border-primary-blue/10 text-text-primary text-sm;
+    @apply px-4 py-3 border-b border-blue-500/10 text-white text-sm;
   }
   
   .schedule-table tr:hover {
-    @apply bg-primary-blue/5;
+    @apply bg-blue-500/5;
   }
 
   /* Schedule Time Component */
   .schedule-time {
-    @apply font-semibold text-primary-blue;
+    @apply font-semibold text-blue-500;
   }
 
   /* Schedule Course Component */
   .schedule-course {
-    @apply font-medium text-text-primary;
+    @apply font-medium text-white;
   }
 
   /* Schedule Location Component */
   .schedule-location {
-    @apply text-text-secondary text-sm;
+    @apply text-gray-300 text-sm;
   }
 
   /* Profile Image Container Component */
   .profile-image-container {
-    @apply relative w-64 h-64 rounded-full border-4 border-primary-blue shadow-2xl shadow-primary-blue/40 overflow-hidden bg-gradient-to-br from-primary-blue to-accent-silver p-1 animate-glow;
+    @apply relative w-64 h-64 rounded-full border-4 border-blue-500 shadow-2xl shadow-blue-500/40 overflow-hidden bg-gradient-to-br from-blue-500 to-gray-300 p-1 animate-glow;
   }
 
   /* Profile Image Inner Component */
   .profile-image-inner {
-    @apply w-full h-full rounded-full overflow-hidden bg-bg-primary;
+    @apply w-full h-full rounded-full overflow-hidden bg-gray-900;
   }
 
   /* Responsive Image Component */
@@ -552,7 +552,7 @@ img, video, canvas {
   }
   
   .responsive-image:hover {
-    @apply scale-105 shadow-xl shadow-primary-blue/20;
+    @apply scale-105 shadow-xl shadow-blue-500/20;
   }
 
   /* Image Container Component */
@@ -562,7 +562,7 @@ img, video, canvas {
 
   /* Image Overlay Component */
   .image-overlay {
-    @apply absolute inset-0 bg-gradient-to-br from-primary-blue/10 to-transparent opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 transition-opacity duration-300;
   }
   
   .image-container:hover .image-overlay {
@@ -571,11 +571,11 @@ img, video, canvas {
 
   /* Profile Image Responsive Component */
   .profile-image-responsive {
-    @apply w-full max-w-xs h-auto aspect-square object-cover rounded-full border-4 border-primary-blue shadow-2xl shadow-primary-blue/40 transition-all duration-300;
+    @apply w-full max-w-xs h-auto aspect-square object-cover rounded-full border-4 border-blue-500 shadow-2xl shadow-blue-500/40 transition-all duration-300;
   }
   
   .profile-image-responsive:hover {
-    @apply scale-105 shadow-2xl shadow-primary-blue/60;
+    @apply scale-105 shadow-2xl shadow-blue-500/60;
   }
 
   /* Icon Responsive Component */
@@ -584,7 +584,7 @@ img, video, canvas {
   }
   
   .icon-responsive:hover {
-    @apply scale-110 drop-shadow-lg drop-shadow-primary-blue/50;
+    @apply scale-110 drop-shadow-lg drop-shadow-blue-500/50;
   }
 
   /* Form Group Component */
@@ -594,20 +594,20 @@ img, video, canvas {
 
   /* Form Label Component */
   .form-label {
-    @apply block mb-2 font-medium text-text-primary text-sm;
+    @apply block mb-2 font-medium text-white text-sm;
   }
 
   /* Form Control Component */
   .form-control {
-    @apply w-full px-4 py-3 border-2 border-primary-blue/30 rounded-lg bg-gray-800/80 text-text-primary text-base transition-all duration-300 box-border;
+    @apply w-full px-4 py-3 border-2 border-blue-500/30 rounded-lg bg-gray-800/80 text-white text-base transition-all duration-300 box-border;
   }
   
   .form-control:focus {
-    @apply outline-none border-primary-blue shadow-lg shadow-primary-blue/30;
+    @apply outline-none border-blue-500 shadow-lg shadow-blue-500/30;
   }
   
   .form-control::placeholder {
-    @apply text-text-muted opacity-70;
+    @apply text-gray-400 opacity-70;
   }
 
   /* Button Group Component */
@@ -642,7 +642,7 @@ img, video, canvas {
   }
   
   .section-header h2::after {
-    @apply absolute -bottom-2 left-1/2 w-16 h-1 bg-gradient-to-r from-primary-blue to-accent-silver rounded-sm -translate-x-1/2;
+    @apply absolute -bottom-2 left-1/2 w-16 h-1 bg-gradient-to-r from-blue-500 to-gray-300 rounded-sm -translate-x-1/2;
   }
 
   /* Grid Enhanced Component */
@@ -660,11 +660,11 @@ img, video, canvas {
 
   /* About Hero Component */
   .about-hero {
-    @apply bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary relative overflow-hidden min-h-screen flex items-center justify-center;
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden min-h-screen flex items-center justify-center;
   }
   
   .about-hero::before {
-    @apply absolute inset-0 bg-gradient-to-r from-primary-blue/10 via-transparent to-cyan-400/10 animate-pulse;
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-cyan-400/10 animate-pulse;
   }
 
   /* Hero Content Component */
@@ -683,7 +683,7 @@ img, video, canvas {
 
   /* Skeleton Component */
   .skeleton {
-    @apply bg-gradient-to-r from-gray-800/80 via-primary-blue/10 to-gray-800/80 bg-200% animate-skeleton-loading;
+    @apply bg-gradient-to-r from-gray-800/80 via-blue-500/10 to-gray-800/80 bg-200% animate-skeleton-loading;
   }
 
   /* Advanced Loading States */
@@ -705,20 +705,20 @@ img, video, canvas {
 
   /* Loading Spinner Variants */
   .loading-spinner-primary {
-    @apply inline-block w-10 h-10 border-4 border-primary-blue/30 rounded-full border-t-primary-blue animate-spin;
+    @apply inline-block w-10 h-10 border-4 border-blue-500/30 rounded-full border-t-blue-500 animate-spin;
   }
   
   .loading-spinner-success {
-    @apply inline-block w-10 h-10 border-4 border-success-green/30 rounded-full border-t-success-green animate-spin;
+    @apply inline-block w-10 h-10 border-4 border-green-500/30 rounded-full border-t-green-500 animate-spin;
   }
   
   .loading-spinner-warning {
-    @apply inline-block w-10 h-10 border-4 border-warning-orange/30 rounded-full border-t-warning-orange animate-spin;
+    @apply inline-block w-10 h-10 border-4 border-orange-500/30 rounded-full border-t-orange-500 animate-spin;
   }
 
   /* Pulse Loading */
   .pulse-loading {
-    @apply animate-pulse bg-gradient-to-r from-gray-800/80 via-primary-blue/20 to-gray-800/80;
+    @apply animate-pulse bg-gradient-to-r from-gray-800/80 via-blue-500/20 to-gray-800/80;
   }
 
   /* Screen Reader Only Component */
@@ -728,7 +728,7 @@ img, video, canvas {
 
   /* Skip Link Component */
   .skip-link {
-    @apply absolute -top-10 left-1.5 bg-primary-blue text-bg-primary px-2 py-2 no-underline rounded z-50;
+    @apply absolute -top-10 left-1.5 bg-blue-500 text-white px-2 py-2 no-underline rounded z-50;
   }
   
   .skip-link:focus {
@@ -742,7 +742,7 @@ img, video, canvas {
 
   /* Keyboard Only Component */
   .keyboard-only:focus {
-    @apply outline-2 outline-primary-blue outline-offset-2;
+    @apply outline-2 outline-blue-500 outline-offset-2;
   }
 
   /* High Contrast Component */
@@ -769,7 +769,7 @@ img, video, canvas {
   
   /* Breadcrumb Component */
   .breadcrumb {
-    @apply flex items-center space-x-2 text-sm text-text-muted mb-6;
+    @apply flex items-center space-x-2 text-sm text-gray-400 mb-6;
   }
   
   .breadcrumb-item {
@@ -777,20 +777,20 @@ img, video, canvas {
   }
   
   .breadcrumb-separator {
-    @apply text-primary-blue/50;
+    @apply text-blue-500/50;
   }
   
   .breadcrumb-link {
-    @apply text-primary-blue hover:text-primary-blue-light transition-colors duration-300;
+    @apply text-blue-500 hover:text-blue-400 transition-colors duration-300;
   }
   
   .breadcrumb-current {
-    @apply text-text-primary font-medium;
+    @apply text-white font-medium;
   }
 
   /* Tooltip Component */
   .tooltip {
-    @apply absolute z-50 px-3 py-2 text-sm text-bg-primary bg-gray-900 rounded-lg shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none;
+    @apply absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none;
   }
   
   .tooltip.visible {
@@ -807,7 +807,7 @@ img, video, canvas {
   }
   
   .progress-fill {
-    @apply h-full bg-gradient-to-r from-primary-blue to-secondary-purple transition-all duration-500 ease-out;
+    @apply h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500 ease-out;
   }
 
   /* Badge Component */
@@ -837,19 +837,19 @@ img, video, canvas {
   }
   
   .alert-info {
-    @apply bg-info-blue/10 border-info-blue text-info-blue;
+    @apply bg-blue-500/10 border-blue-500 text-blue-500;
   }
   
   .alert-success {
-    @apply bg-success-green/10 border-success-green text-success-green;
+    @apply bg-green-500/10 border-green-500 text-green-500;
   }
   
   .alert-warning {
-    @apply bg-warning-orange/10 border-warning-orange text-warning-orange;
+    @apply bg-orange-500/10 border-orange-500 text-orange-500;
   }
   
   .alert-error {
-    @apply bg-error-red/10 border-error-red text-error-red;
+    @apply bg-red-500/10 border-red-500 text-red-500;
   }
 
   /* Modal Component */
@@ -858,7 +858,7 @@ img, video, canvas {
   }
   
   .modal-content {
-    @apply bg-gray-900/95 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-primary-blue/20 backdrop-blur-xl;
+    @apply bg-gray-900/95 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-blue-500/20 backdrop-blur-xl;
   }
   
   .modal-header {
@@ -866,15 +866,15 @@ img, video, canvas {
   }
   
   .modal-title {
-    @apply text-xl font-semibold text-text-primary;
+    @apply text-xl font-semibold text-white;
   }
   
   .modal-close {
-    @apply text-text-muted hover:text-text-primary transition-colors duration-300;
+    @apply text-gray-400 hover:text-white transition-colors duration-300;
   }
   
   .modal-body {
-    @apply text-text-secondary mb-6;
+    @apply text-gray-300 mb-6;
   }
   
   .modal-footer {
@@ -887,7 +887,7 @@ img, video, canvas {
   }
   
   .dropdown-menu {
-    @apply absolute right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-2xl border border-primary-blue/20 backdrop-blur-xl z-50 opacity-0 invisible transition-all duration-300;
+    @apply absolute right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-2xl border border-blue-500/20 backdrop-blur-xl z-50 opacity-0 invisible transition-all duration-300;
   }
   
   .dropdown-menu.visible {
@@ -895,12 +895,12 @@ img, video, canvas {
   }
   
   .dropdown-item {
-    @apply block px-4 py-3 text-sm text-text-primary hover:bg-primary-blue/10 transition-colors duration-300;
+    @apply block px-4 py-3 text-sm text-white hover:bg-blue-500/10 transition-colors duration-300;
   }
 
   /* Tabs Component */
   .tabs {
-    @apply border-b border-primary-blue/20;
+    @apply border-b border-blue-500/20;
   }
   
   .tab-list {
@@ -908,11 +908,11 @@ img, video, canvas {
   }
   
   .tab {
-    @apply px-4 py-2 text-sm font-medium text-text-muted hover:text-text-primary transition-colors duration-300 border-b-2 border-transparent;
+    @apply px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors duration-300 border-b-2 border-transparent;
   }
   
   .tab.active {
-    @apply text-primary-blue border-primary-blue;
+    @apply text-blue-500 border-blue-500;
   }
   
   .tab-panel {
@@ -921,11 +921,11 @@ img, video, canvas {
 
   /* Accordion Component */
   .accordion {
-    @apply border border-primary-blue/20 rounded-xl overflow-hidden;
+    @apply border border-blue-500/20 rounded-xl overflow-hidden;
   }
   
   .accordion-item {
-    @apply border-b border-primary-blue/10 last:border-b-0;
+    @apply border-b border-blue-500/10 last:border-b-0;
   }
   
   .accordion-header {
@@ -951,15 +951,15 @@ img, video, canvas {
   }
   
   .stat-card {
-    @apply bg-gradient-to-br from-gray-800/90 to-gray-900/95 rounded-2xl p-6 text-center border border-primary-blue/20 shadow-2xl;
+    @apply bg-gradient-to-br from-gray-800/90 to-gray-900/95 rounded-2xl p-6 text-center border border-blue-500/20 shadow-2xl;
   }
   
   .stat-value {
-    @apply text-3xl font-bold text-primary-blue mb-2;
+    @apply text-3xl font-bold text-blue-500 mb-2;
   }
   
   .stat-label {
-    @apply text-text-secondary text-sm;
+    @apply text-gray-300 text-sm;
   }
 
   /* Timeline Component */
@@ -968,7 +968,7 @@ img, video, canvas {
   }
   
   .timeline::before {
-    @apply absolute left-4 top-0 bottom-0 w-0.5 bg-primary-blue/20;
+    @apply absolute left-4 top-0 bottom-0 w-0.5 bg-blue-500/20;
   }
   
   .timeline-item {
@@ -976,11 +976,11 @@ img, video, canvas {
   }
   
   .timeline-marker {
-    @apply absolute left-0 w-4 h-4 bg-primary-blue rounded-full border-4 border-bg-primary;
+    @apply absolute left-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900;
   }
   
   .timeline-content {
-    @apply ml-6 bg-gray-800/90 rounded-xl p-4 border border-primary-blue/20 shadow-lg;
+    @apply ml-6 bg-gray-800/90 rounded-xl p-4 border border-blue-500/20 shadow-lg;
   }
 
   /* Feature Grid Component */
@@ -989,19 +989,19 @@ img, video, canvas {
   }
   
   .feature-card {
-    @apply text-center p-8 rounded-2xl border border-primary-blue/20 shadow-2xl transition-all duration-500 hover:scale-105;
+    @apply text-center p-8 rounded-2xl border border-blue-500/20 shadow-2xl transition-all duration-500 hover:scale-105;
   }
   
   .feature-icon {
-    @apply w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-primary-blue to-secondary-purple rounded-full flex items-center justify-center text-2xl text-bg-primary;
+    @apply w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-2xl text-white;
   }
   
   .feature-title {
-    @apply text-xl font-semibold text-text-primary mb-3;
+    @apply text-xl font-semibold text-white mb-3;
   }
   
   .feature-description {
-    @apply text-text-secondary;
+    @apply text-gray-300;
   }
 }
 

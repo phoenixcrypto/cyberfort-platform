@@ -130,7 +130,7 @@ export default function Home() {
             
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="feature-card enhanced-card-primary" data-aos="fade-up" data-aos-delay="100">
+              <div className="feature-card enhanced-card-primary flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-icon">
                   <i className="fas fa-calendar-alt"></i>
                 </div>
@@ -141,12 +141,12 @@ export default function Home() {
                 <div className="mt-4 mb-6">
                   <span className="badge badge-primary">Real-time Updates</span>
                 </div>
-                <Link href="/schedule" className="btn-enhanced w-full">
+                <Link href="/schedule" className="btn-enhanced w-full mt-auto">
                   <i className="fas fa-calendar mr-2"></i> View Schedule
                 </Link>
               </div>
               
-              <div className="feature-card enhanced-card-success" data-aos="fade-up" data-aos-delay="200">
+              <div className="feature-card enhanced-card-success flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                 <div className="feature-icon">
                   <i className="fas fa-file-pdf"></i>
                 </div>
@@ -157,12 +157,12 @@ export default function Home() {
                 <div className="mt-4 mb-6">
                   <span className="badge badge-success">Always Updated</span>
                 </div>
-                <Link href="/materials" className="btn-enhanced w-full">
+                <Link href="/materials" className="btn-enhanced w-full mt-auto">
                   <i className="fas fa-book mr-2"></i> Browse Materials
                 </Link>
               </div>
               
-              <div className="feature-card enhanced-card-warning" data-aos="fade-up" data-aos-delay="300">
+              <div className="feature-card enhanced-card-warning flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
                 <div className="feature-icon">
                   <i className="fas fa-tasks"></i>
                 </div>
@@ -173,7 +173,7 @@ export default function Home() {
                 <div className="mt-4 mb-6">
                   <span className="badge badge-warning">Deadline Tracking</span>
                 </div>
-                <Link href="/tasks" className="btn-enhanced w-full">
+                <Link href="/tasks" className="btn-enhanced w-full mt-auto">
                   <i className="fas fa-tasks mr-2"></i> View Tasks
                 </Link>
               </div>

@@ -275,6 +275,9 @@ img, video, canvas {
   /* WhatsApp Icon Component */
   .whatsapp-icon {
     @apply text-3xl text-white transition-all duration-300;
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400;
+    display: inline-block;
   }
   
   .whatsapp-float:hover .whatsapp-icon {

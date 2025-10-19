@@ -32,7 +32,7 @@ const WhatsAppButton = () => {
         }
       }}
     >
-      <i className="fab fa-whatsapp whatsapp-icon"></i>
+      <i className="fab fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
     </div>
   )
 }

@@ -261,7 +261,7 @@ img, video, canvas {
 
   /* WhatsApp Float Component */
   .whatsapp-float {
-    @apply fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 opacity-0 scale-0 z-50 animate-whatsapp-pulse;
+    @apply fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 opacity-0 scale-0 z-50;
   }
   
   .whatsapp-float.visible {
@@ -279,6 +279,11 @@ img, video, canvas {
   
   .whatsapp-float:hover .whatsapp-icon {
     @apply scale-110;
+  }
+
+  /* WhatsApp Pulse Animation */
+  .whatsapp-float.visible {
+    animation: whatsappPulse 2s infinite;
   }
 
   /* Schedule Table Component */
@@ -609,11 +614,11 @@ img, video, canvas {
   }
   
   .whatsapp-float {
-    @apply bottom-4 right-4 w-12 h-12;
+    @apply bottom-4 right-4 w-14 h-14;
   }
   
   .whatsapp-icon {
-    @apply text-xl;
+    @apply text-2xl;
   }
   
   /* Extra small screens */

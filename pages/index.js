@@ -130,9 +130,6 @@ export default function Home() {
                 <p className="text-center mb-6 text-text-secondary">
                   Access your class schedule for both Group A and Group B. Stay updated with any changes and never miss a class.
                 </p>
-                <Link href="/schedule" className="btn-enhanced w-full">
-                  <i className="fas fa-calendar mr-2"></i> View Schedule
-                </Link>
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="200">
@@ -145,9 +142,6 @@ export default function Home() {
                 <p className="text-center mb-6 text-text-secondary">
                   Download course materials, lecture notes, and resources. All organized by course and updated regularly.
                 </p>
-                <Link href="/materials" className="btn-enhanced w-full">
-                  <i className="fas fa-book mr-2"></i> Browse Materials
-                </Link>
               </div>
               
               <div className="enhanced-card" data-aos="fade-up" data-aos-delay="300">
@@ -160,10 +154,20 @@ export default function Home() {
                 <p className="text-center mb-6 text-text-secondary">
                   Track your assignments and projects. Mark tasks as complete and stay on top of your deadlines.
                 </p>
-                <Link href="/tasks" className="btn-enhanced w-full">
-                  <i className="fas fa-tasks mr-2"></i> View Tasks
-                </Link>
               </div>
+            </div>
+            
+            {/* All Buttons in One Row */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8" data-aos="fade-up" data-aos-delay="400">
+              <Link href="/schedule" className="btn-enhanced">
+                <i className="fas fa-calendar mr-2"></i> View Schedule
+              </Link>
+              <Link href="/materials" className="btn-enhanced">
+                <i className="fas fa-book mr-2"></i> Browse Materials
+              </Link>
+              <Link href="/tasks" className="btn-enhanced">
+                <i className="fas fa-tasks mr-2"></i> View Tasks
+              </Link>
             </div>
           </div>
         </section>

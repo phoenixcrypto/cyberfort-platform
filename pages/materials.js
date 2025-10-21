@@ -93,8 +93,8 @@ export default function Materials() {
   return (
     <>
               <Head>
-                <title>Materials – CyberSec'25 | ElTmsah</title>
-                <meta name="description" content="Course materials for Cyber Security 2025 — managed by ElTmsah" />
+                <title>Materials – CyberFort</title>
+                <meta name="description" content="Course materials for Cyber Security 2025 — managed by CyberFort Team" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
                 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
                 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />

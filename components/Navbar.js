@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className={`navbar enhanced-navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link href="/" className="nav-logo enhanced-logo">
-          <span className="logo-text">CYBERSEC'25</span>
+          <span className="logo-text">CYBERFORT</span>
           <span className="logo-glow"></span>
         </Link>
         

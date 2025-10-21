@@ -10,9 +10,9 @@ export default function Announcements() {
   const announcements = [
     {
       id: 'ann-1',
-      title: 'Welcome to CyberSec\'25 Platform!',
-      content: 'Welcome to the official CyberSec\'25 platform! This is your central hub for all course materials, schedules, and announcements. Stay updated and organized throughout your cybersecurity journey. If you have any questions or suggestions, feel free to contact us via WhatsApp.',
-      author: 'ElTmsah',
+      title: 'Welcome to CyberFort Platform!',
+      content: 'Welcome to the official CyberFort platform! This is your central hub for all course materials, schedules, and announcements. Stay updated and organized throughout your cybersecurity journey. If you have any questions or suggestions, feel free to contact us via WhatsApp.',
+      author: 'CyberFort Team',
       date: '2025-01-01',
       priority: 'high'
     },
@@ -90,8 +90,8 @@ export default function Announcements() {
   return (
     <>
       <Head>
-        <title>Announcements – CyberSec'25 | ElTmsah</title>
-        <meta name="description" content="Official platform for Cyber Security 2025 — managed by ElTmsah. All schedules, materials and announcements in one place." />
+        <title>Announcements – CyberFort</title>
+        <meta name="description" content="Official platform for Cyber Security 2025 — managed by CyberFort Team. All schedules, materials and announcements in one place." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />

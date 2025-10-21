@@ -10,8 +10,8 @@ export default function About() {
   return (
     <>
               <Head>
-                <title>About – CyberSec'25 | ElTmsah</title>
-                <meta name="description" content="Meet Zeyad Eltmsah - Cyber Security 2025 student and creator of the CyberSec'25 platform. Passionate about leadership, defense, and innovation." />
+                <title>About – CyberFort</title>
+                <meta name="description" content="Meet Zeyad Mohamed - Cyber Security 2025 student and creator of the CyberFort platform. Passionate about leadership, defense, and innovation." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -61,7 +61,7 @@ export default function About() {
               {/* Name with Gradient Effect */}
               <div data-aos="fade-up" data-aos-delay="200">
                 <h1 className="gradient-text text-4xl md:text-5xl lg:text-6xl mb-4">
-                  Zeyad Eltmsah
+                  ZEYAD MOHAMED
                 </h1>
                 
                 <div className="flex items-center justify-center gap-4 mt-4">
@@ -92,8 +92,8 @@ export default function About() {
                     <div className="text-text-muted text-sm">Department</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-primary-blue text-3xl font-bold">🐊</div>
-                    <div className="text-text-muted text-sm">ElTmsah</div>
+                    <div className="text-primary-blue text-3xl font-bold">🏰</div>
+                    <div className="text-text-muted text-sm">CyberFort</div>
                   </div>
                 </div>
               </div>
@@ -143,9 +143,7 @@ export default function About() {
                 
                 <div className="text-text-secondary leading-relaxed">
                   <p className="mb-6">
-                    The CyberSec'25 platform is your one-stop destination for all course information. 
-                    Created by students, it brings together everything you need in one convenient place - 
-                    materials, schedules, assignments, and announcements.
+                    CyberFort هو مركز تفاعلي لطلاب قسم الأمن السيبراني، يجمع المحاضرات، الشروحات، المهام، والمواد الدراسية في مكان واحد منظم، بإدارة فريق القيادة الطلابية.
                   </p>
                   
                   <h4 className="text-accent-silver mb-4 text-lg font-semibold">

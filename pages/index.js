@@ -42,10 +42,10 @@ export default function Home() {
         // Mock announcements data for demo
         setAnnouncementsData({
           latest: {
-            title: "Welcome to CyberSec'25 Platform!",
+            title: "Welcome to CyberFort Platform!",
             content: "This is your central hub for all course materials, schedules, and announcements. Stay updated and organized throughout your cybersecurity journey.",
             date: "2025-01-01",
-            author: "ElTmsah"
+            author: "CyberFort Team"
           }
         })
 
@@ -71,8 +71,8 @@ export default function Home() {
   return (
     <>
               <Head>
-                <title>Home – CyberSec'25 | ElTmsah</title>
-                <meta name="description" content="Official platform for Cyber Security 2025 — managed by ElTmsah. All schedules, materials and announcements in one place." />
+                <title>CyberFort</title>
+                <meta name="description" content="CyberFort — The Ultimate Cyber Security Hub for Students. Learn, Organize, and Protect." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -103,11 +103,11 @@ export default function Home() {
               <div className="floating-element w-16 h-16 top-70 right-8"></div>
               
               <h1 className="gradient-text text-4xl md:text-5xl lg:text-6xl mb-6">
-                CYBERSEC'25 | ELTMSAH
+                CYBERFORT
               </h1>
               <p className="text-xl md:text-2xl text-text-primary font-medium mb-8 max-w-4xl mx-auto leading-relaxed">
-                Your comprehensive platform for Cyber Security course materials, schedules, 
-                and announcements. Organized by students, for students.
+                منصة CyberFort الرسمية لطلاب قسم الأمن السيبراني. 
+                مركز شامل للمواد الدراسية، الجداول، والمهام.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="/materials" className="btn-enhanced">

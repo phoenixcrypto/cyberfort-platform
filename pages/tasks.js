@@ -52,8 +52,8 @@ export default function Tasks() {
   return (
     <>
               <Head>
-                <title>Tasks – CyberSec'25 | ElTmsah</title>
-                <meta name="description" content="Assignments and tasks for Cyber Security 2025 — managed by ElTmsah" />
+                <title>Tasks – CyberFort</title>
+                <meta name="description" content="Assignments and tasks for Cyber Security 2025 — managed by CyberFort Team" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
               </Head>

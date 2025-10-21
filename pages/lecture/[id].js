@@ -57,7 +57,7 @@ export default function Lecture() {
     return (
       <>
         <Head>
-          <title>Loading... – CyberSec'25 | ElTmsah</title>
+          <title>Loading... – CyberFort</title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         </Head>
@@ -78,7 +78,7 @@ export default function Lecture() {
     return (
       <>
         <Head>
-          <title>Lecture Not Found – CyberSec'25 | ElTmsah</title>
+          <title>Lecture Not Found – CyberFort</title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         </Head>
         <Navbar />
@@ -101,7 +101,7 @@ export default function Lecture() {
   return (
     <>
       <Head>
-        <title>{lecture.lecture_title} – CyberSec'25 | ElTmsah</title>
+        <title>{lecture.lecture_title} – CyberFort</title>
         <meta name="description" content={`${lecture.subject} lecture: ${lecture.lecture_title}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />

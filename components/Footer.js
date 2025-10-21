@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="footer-text">
-          © 2025 CyberSec'25 | Designed & Managed by ElTmsah 🐊
+          © 2025 CyberFort. All rights reserved.
         </p>
         <p className="footer-text">
           All course materials and schedules are managed by the student community

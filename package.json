@@ -1,7 +1,7 @@
 {
-  "name": "cybersec25-eltmsah",
+  "name": "cyberfort-platform",
   "version": "1.0.0",
-  "description": "Official platform for Cyber Security 2025 — managed by ElTmsah",
+  "description": "CyberFort — The Ultimate Cyber Security Hub for Students. Learn, Organize, and Protect.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -30,6 +30,6 @@
     "nextjs",
     "student-platform"
   ],
-  "author": "ElTmsah",
+  "author": "CyberFort Team",
   "license": "MIT"
 }

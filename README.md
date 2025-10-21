@@ -1,4 +1,4 @@
-# CyberSec'25 | ElTmsah Platform
+# CyberFort Platform
 
 A comprehensive Next.js platform for Cyber Security 2025 course management, built and maintained by students for students.
 
@@ -16,7 +16,7 @@ A comprehensive Next.js platform for Cyber Security 2025 course management, buil
 ## 📁 Project Structure
 
 ```
-cybersec25-eltmsah/
+cyberfort-platform/
 ├── pages/                    # Next.js pages
 │   ├── index.js             # Home page with overview
 │   ├── schedule.js          # Class schedules (Group A/B)
@@ -59,7 +59,7 @@ cybersec25-eltmsah/
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd cybersec25-eltmsah
+cd cyberfort-platform
 
 # Install dependencies
 npm install
@@ -310,4 +310,4 @@ For support and questions:
 
 ---
 
-**Built with ❤️ by ElTmsah for the Cyber Security 2025 community**
+**Built with ❤️ by CyberFort Team for the Cyber Security 2025 community**
